@@ -9,14 +9,14 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/index.html</loc>
+    <loc>https://lsqi.github.io/contact/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/contact/index.html</loc>
+    <loc>https://lsqi.github.io/tags/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
@@ -30,14 +30,14 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/categories/index.html</loc>
+    <loc>https://lsqi.github.io/archives/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/archives/index.html</loc>
+    <loc>https://lsqi.github.io/categories/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
@@ -116,28 +116,14 @@
 
   
   <url>
-    <loc>https://lsqi.github.io/tags/Mac/</loc>
-    <lastmod>2020-08-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lsqi.github.io/tags/NexT/</loc>
-    <lastmod>2020-08-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lsqi.github.io/tags/http%E5%8D%8F%E8%AE%AE/</loc>
-    <lastmod>2020-08-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://lsqi.github.io/tags/maven/</loc>
+    <lastmod>2020-08-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsqi.github.io/tags/Mac/</loc>
     <lastmod>2020-08-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -151,14 +137,14 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/Hexo/</loc>
+    <loc>https://lsqi.github.io/tags/NexT/</loc>
     <lastmod>2020-08-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/%E9%97%AA%E7%83%81%E4%B9%8B%E7%8B%90hexo-theme-matery/</loc>
+    <loc>https://lsqi.github.io/tags/Hexo/</loc>
     <lastmod>2020-08-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -179,14 +165,14 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/java/</loc>
+    <loc>https://lsqi.github.io/tags/http%E5%8D%8F%E8%AE%AE/</loc>
     <lastmod>2020-08-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/linux/</loc>
+    <loc>https://lsqi.github.io/tags/%E9%97%AA%E7%83%81%E4%B9%8B%E7%8B%90hexo-theme-matery/</loc>
     <lastmod>2020-08-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -206,17 +192,31 @@
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://lsqi.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <loc>https://lsqi.github.io/tags/java/</loc>
     <lastmod>2020-08-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
+    <loc>https://lsqi.github.io/tags/linux/</loc>
+    <lastmod>2020-08-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
     <loc>https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-08-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsqi.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2020-08-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
