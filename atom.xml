@@ -5,9 +5,9 @@
   <subtitle>[object Object]</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://lsqi.github.io/"/>
-  <updated>2020-08-14T10:31:38.471Z</updated>
-  <id>https://lsqi.github.io/</id>
+  <link href="http://lishengqi.gitee.io/"/>
+  <updated>2020-08-14T15:43:24.830Z</updated>
+  <id>http://lishengqi.gitee.io/</id>
   
   <author>
     <name>小黑</name>
@@ -17,36 +17,9 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>引用&quot;闪烁之狐&quot;博客主题hexo-theme-matery</title>
-    <link href="https://lsqi.github.io/posts/12338.html"/>
-    <id>https://lsqi.github.io/posts/12338.html</id>
-    <published>2020-08-12T12:14:39.000Z</published>
-    <updated>2020-08-14T10:31:38.471Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>参照<strong>闪烁之狐</strong> <a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/">Hexo博客主题之hexo-theme-matery的介绍</a>。为hexo博客引入matery主题。该博客仅表达个人看法</p></blockquote><p><font color="" face="" size="5"><strong>为何使用”闪烁之狐”博客主题，原因有三 : </strong></font></p><h4 id="1-“闪烁之狐”主题样式丰富"><a href="#1-“闪烁之狐”主题样式丰富" class="headerlink" title="1. “闪烁之狐”主题样式丰富"></a><strong>1. “闪烁之狐”主题样式丰富</strong></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最开始使用的next主题。在配置next主题的过程中，可能是因为第一次的原因，可谓是一步一个坑。各大博客网站上关于搭建信息更是层出不穷，很大的原因是mac配置next主题的材料很少。经过了三天的努力，才仅仅打出来这样的样式</p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghoazzkzalj31ki0u0h02.jpg" style="box-shadow: 1px 1px 10px rgba(0,0,0,.5)"><p>​        现在使用的主题。</p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghob21kgo1j31kd0u0x6r.jpg" style="box-shadow: 1px 1px 10px rgba(0,0,0,.5)"><h4 id="2-“闪烁之狐”主题配置效果丰富"><a href="#2-“闪烁之狐”主题配置效果丰富" class="headerlink" title="2. “闪烁之狐”主题配置效果丰富"></a><strong>2. “闪烁之狐”主题配置效果丰富</strong></h4><p><a href="https://theme-next.iissnan.com/theme-settings.html">next主题配置文档</a></p><p><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/">闪烁之狐配置文档</a></p><p>​       举一个例子。如”闪烁之狐”主题，闪烁之狐的主题兼容Gitalk， gitment， disqus， livere， valine多个评论模块的配置。同时博客主题的背景根据配置，每天都有不一样的背景。当然还有我最喜欢的就是，每写一个博客之后，都想要一个好看漂亮的封面，这样自己看的也很舒服。你可以自定义设定背景，同样也可以使用默认的图片做博客的封面。</p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghobqvjb9kj31ke0u01ky.jpg" style="box-shadow: 1px 1px 10px rgba(0,0,0,.5)"><h4 id="3-偏向新手搭建个人博客"><a href="#3-偏向新手搭建个人博客" class="headerlink" title="3. 偏向新手搭建个人博客"></a><strong>3. 偏向新手搭建个人博客</strong></h4><p>​        对我这种后端的开发人员第一次搭建个人博客，很友好，在使用”闪烁之狐”的博客主题过程中，更偏向博客配色，博客图片使用等方面。配色方面的话，可以去 <strong><a href="http://color.oulu.me/">一个集合180种免费的线性渐变网站</a></strong> 查看配色方案。说到这，如果喜欢<strong>闪烁之狐</strong>大佬的主题的话，马上心动吧</p><blockquote><p>以上内容单纯个人看法，不喜勿喷。如果我的博客帮到了你，我本人也很开心。如果你搭建博客过程中碰到许多的坑，或者说书面文档对你帮助不是很大。别灰心，推荐你去B站上看<a href="https://www.bilibili.com/video/av44544186">手把手教你从0开始搭建自己的个人博客</a> B站观看人数最多的搭建博客教程。</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;参照&lt;strong&gt;闪烁之狐&lt;/strong&gt; &lt;a href=&quot;http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-sha
-      
-    
-    </summary>
-    
-    
-      <category term="博客搭建" scheme="https://lsqi.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-      <category term="闪烁之狐hexo-theme-matery" scheme="https://lsqi.github.io/tags/%E9%97%AA%E7%83%81%E4%B9%8B%E7%8B%90hexo-theme-matery/"/>
-    
-  </entry>
-  
-  <entry>
     <title>抽象类和接口</title>
-    <link href="https://lsqi.github.io/posts/45299.html"/>
-    <id>https://lsqi.github.io/posts/45299.html</id>
+    <link href="http://lishengqi.gitee.io/posts/45299.html"/>
+    <id>http://lishengqi.gitee.io/posts/45299.html</id>
     <published>2020-08-11T16:39:45.000Z</published>
     <updated>2020-08-14T15:43:24.830Z</updated>
     
@@ -64,19 +37,19 @@
     </summary>
     
     
-      <category term="Java基础" scheme="https://lsqi.github.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java基础" scheme="http://lishengqi.gitee.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="抽象类" scheme="https://lsqi.github.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
+      <category term="抽象类" scheme="http://lishengqi.gitee.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
     
-      <category term="接口" scheme="https://lsqi.github.io/tags/%E6%8E%A5%E5%8F%A3/"/>
+      <category term="接口" scheme="http://lishengqi.gitee.io/tags/%E6%8E%A5%E5%8F%A3/"/>
     
   </entry>
   
   <entry>
     <title>项目打包运行在后台</title>
-    <link href="https://lsqi.github.io/posts/63379.html"/>
-    <id>https://lsqi.github.io/posts/63379.html</id>
+    <link href="http://lishengqi.gitee.io/posts/63379.html"/>
+    <id>http://lishengqi.gitee.io/posts/63379.html</id>
     <published>2020-08-08T08:45:41.000Z</published>
     <updated>2020-08-14T15:41:30.120Z</updated>
     
@@ -95,19 +68,19 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="java" scheme="https://lsqi.github.io/tags/java/"/>
+      <category term="java" scheme="http://lishengqi.gitee.io/tags/java/"/>
     
-      <category term="linux" scheme="https://lsqi.github.io/tags/linux/"/>
+      <category term="linux" scheme="http://lishengqi.gitee.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>http学习</title>
-    <link href="https://lsqi.github.io/posts/64520.html"/>
-    <id>https://lsqi.github.io/posts/64520.html</id>
+    <link href="http://lishengqi.gitee.io/posts/64520.html"/>
+    <id>http://lishengqi.gitee.io/posts/64520.html</id>
     <published>2020-08-08T08:42:08.000Z</published>
     <updated>2020-08-14T15:41:48.284Z</updated>
     
@@ -123,17 +96,17 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="http协议" scheme="https://lsqi.github.io/tags/http%E5%8D%8F%E8%AE%AE/"/>
+      <category term="http协议" scheme="http://lishengqi.gitee.io/tags/http%E5%8D%8F%E8%AE%AE/"/>
     
   </entry>
   
   <entry>
     <title>使用homebrew安装openResty</title>
-    <link href="https://lsqi.github.io/posts/14066.html"/>
-    <id>https://lsqi.github.io/posts/14066.html</id>
+    <link href="http://lishengqi.gitee.io/posts/14066.html"/>
+    <id>http://lishengqi.gitee.io/posts/14066.html</id>
     <published>2020-08-08T08:41:58.000Z</published>
     <updated>2020-08-14T15:41:15.883Z</updated>
     
@@ -151,19 +124,19 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="homebrew" scheme="https://lsqi.github.io/tags/homebrew/"/>
+      <category term="homebrew" scheme="http://lishengqi.gitee.io/tags/homebrew/"/>
     
-      <category term="openResty" scheme="https://lsqi.github.io/tags/openResty/"/>
+      <category term="openResty" scheme="http://lishengqi.gitee.io/tags/openResty/"/>
     
   </entry>
   
   <entry>
     <title>mac下安装maven</title>
-    <link href="https://lsqi.github.io/posts/59524.html"/>
-    <id>https://lsqi.github.io/posts/59524.html</id>
+    <link href="http://lishengqi.gitee.io/posts/59524.html"/>
+    <id>http://lishengqi.gitee.io/posts/59524.html</id>
     <published>2020-08-08T08:41:36.000Z</published>
     <updated>2020-08-14T15:42:03.754Z</updated>
     
@@ -182,21 +155,21 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
     
-      <category term="maven" scheme="https://lsqi.github.io/tags/maven/"/>
+      <category term="maven" scheme="http://lishengqi.gitee.io/tags/maven/"/>
     
-      <category term="环境变量" scheme="https://lsqi.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+      <category term="环境变量" scheme="http://lishengqi.gitee.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     
   </entry>
   
   <entry>
     <title>Mac下配置NexT主题</title>
-    <link href="https://lsqi.github.io/posts/63598.html"/>
-    <id>https://lsqi.github.io/posts/63598.html</id>
+    <link href="http://lishengqi.gitee.io/posts/63598.html"/>
+    <id>http://lishengqi.gitee.io/posts/63598.html</id>
     <published>2020-08-02T15:03:39.000Z</published>
     <updated>2020-08-14T10:32:35.139Z</updated>
     
@@ -214,19 +187,19 @@
     </summary>
     
     
-      <category term="博客搭建" scheme="https://lsqi.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="http://lishengqi.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
     
-      <category term="NexT" scheme="https://lsqi.github.io/tags/NexT/"/>
+      <category term="NexT" scheme="http://lishengqi.gitee.io/tags/NexT/"/>
     
   </entry>
   
   <entry>
     <title>Github+Hexo搭建个人博客</title>
-    <link href="https://lsqi.github.io/posts/42500.html"/>
-    <id>https://lsqi.github.io/posts/42500.html</id>
+    <link href="http://lishengqi.gitee.io/posts/42500.html"/>
+    <id>http://lishengqi.gitee.io/posts/42500.html</id>
     <published>2020-08-02T06:08:09.861Z</published>
     <updated>2020-08-14T15:42:10.177Z</updated>
     
@@ -243,12 +216,12 @@
     </summary>
     
     
-      <category term="博客搭建" scheme="https://lsqi.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="http://lishengqi.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
     
-      <category term="Hexo" scheme="https://lsqi.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://lishengqi.gitee.io/tags/Hexo/"/>
     
   </entry>
   

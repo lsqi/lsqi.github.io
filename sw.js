@@ -34,8 +34,6 @@ var precacheUrls = [];
 
   precacheUrls.push('/posts/14066.html');
 
-  precacheUrls.push('/posts/12338.html');
-
   precacheUrls.push('/posts/63379.html');
 
   precacheUrls.push('/posts/45299.html');
