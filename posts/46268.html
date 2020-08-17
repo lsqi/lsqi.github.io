@@ -4,11 +4,10 @@
 
 <head><link rel=manifest href=/manifest.json>
     <meta charset="utf-8">
-    <meta name="keywords" content="Github+Hexo搭建个人博客, 博客 新手搭建博客 Java">
+    <meta name="keywords" content="重构SpringBoot项目, 博客 新手搭建博客 Java">
     <meta name="description" content="
-前言：最近自己用markdown写了一些博客，想着把自己写的东西也放在Github上。然后……自己的博客搭建了三天才完成。这过程也是蛮丰富的，一步一个脚印，一步一个坑啊。我把自己遇到的比较烦人的问题记下来，方便自己也方便大家 
-
-搭建环境">
+最近在学习微服务的过程中，需要将之前学到的SpringBoot项目重构。
+个人在学习过程中参考 慕课网小马哥的 Spring Boot 2.0深度实践-初遇Spring Boot 这门课程是免费的。如果博客阐述不当，可以去看看小马哥的视频">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +16,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="white"/>
-    <title>Github+Hexo搭建个人博客 | Xiao Hei&#39;Blog</title>
+    <title>重构SpringBoot项目 | Xiao Hei&#39;Blog</title>
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/medias/jingyu.png">
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -343,12 +342,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://tva1.sinaimg.cn/large/007S8ZIlly1ghkda1kudxj308m04imx7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Github+Hexo搭建个人博客</h1>
+                    <h1 class="description center-align post-title">重构SpringBoot项目</h1>
                 </div>
             </div>
         </div>
@@ -464,12 +463,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Mac/">
-                                    <span class="chip bg-color">Mac</span>
-                                </a>
-                            
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/">
+                                    <span class="chip bg-color">项目重构</span>
                                 </a>
                             
                         </div>
@@ -480,8 +475,8 @@
                         <div class="post-cate">
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                                <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
-                                    博客搭建
+                                <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
                                 </a>
                             
                         </div>
@@ -495,21 +490,21 @@
                 
                     <div class="post-date info-break-policy">
                         <i class="fa fa-calendar-check-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                        2020-08-14
+                        2020-08-17
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        642
+                        1.2k
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        4 分
                     </div>
                 
 
@@ -525,84 +520,73 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p><strong>前言：最近自己用markdown写了一些博客，想着把自己写的东西也放在Github上。然后……自己的博客搭建了三天才完成。这过程也是蛮丰富的，一步一个脚印，一步一个坑啊。我把自己遇到的比较烦人的问题记下来，方便自己也方便大家</strong> </p>
+<p>最近在学习微服务的过程中，需要将之前学到的SpringBoot项目重构。</p>
+<p>个人在学习过程中参考 慕课网小马哥的 <a href="https://www.imooc.com/learn/933">Spring Boot 2.0深度实践-初遇Spring Boot</a> 这门课程是免费的。如果博客阐述不当，可以去看看小马哥的视频，大佬绝对把你教会。</p>
 </blockquote>
-<h3 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h3><ol>
-<li><p><strong>Git</strong></p>
-<p>查看电脑是否安装Git。</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>显示以下代码证明系统上安装Git</p>
-<pre class="line-numbers language-bash"><code class="language-bash">用法：git <span class="token punctuation">[</span>--version<span class="token punctuation">]</span> <span class="token punctuation">[</span>--help<span class="token punctuation">]</span> <span class="token punctuation">[</span>-C <span class="token operator">&lt;</span>path<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-c <span class="token operator">&lt;</span>name<span class="token operator">>=</span><span class="token operator">&lt;</span>value<span class="token operator">></span><span class="token punctuation">]</span>
-           <span class="token punctuation">[</span>--exec-path<span class="token punctuation">[</span><span class="token operator">=</span><span class="token operator">&lt;</span>path<span class="token operator">></span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>--html-path<span class="token punctuation">]</span> <span class="token punctuation">[</span>--man-path<span class="token punctuation">]</span> <span class="token punctuation">[</span>--info-path<span class="token punctuation">]</span>
-           <span class="token punctuation">[</span>-p <span class="token operator">|</span> --paginate <span class="token operator">|</span> -P <span class="token operator">|</span> --no-pager<span class="token punctuation">]</span> <span class="token punctuation">[</span>--no-replace-objects<span class="token punctuation">]</span> <span class="token punctuation">[</span>--bare<span class="token punctuation">]</span>
-           <span class="token punctuation">[</span>--git-dir<span class="token operator">=</span><span class="token operator">&lt;</span>path<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">[</span>--work-tree<span class="token operator">=</span><span class="token operator">&lt;</span>path<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">[</span>--namespace<span class="token operator">=</span><span class="token operator">&lt;</span>name<span class="token operator">></span><span class="token punctuation">]</span>
-           <span class="token operator">&lt;</span>command<span class="token operator">></span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>args<span class="token operator">></span><span class="token punctuation">]</span>
-<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>通过homebrew安装Git，如未安装homebrew，安装命令如下</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ /usr/bin/ruby -e <span class="token string">"<span class="token variable"><span class="token variable">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>安装Git</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ brew <span class="token function">install</span> <span class="token function">git</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p><strong>Node.js</strong></p>
-<p>安装命令如下：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ brew <span class="token function">link</span> node
-$ brew uninstall node
-$ brew <span class="token function">install</span> node<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>验证Node是否安装成功：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ node -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>安装成功，显示node版本号</p>
-</li>
-</ol>
-<img src="https://s1.ax1x.com/2020/08/03/adeqP0.jpg" style="width:738px;margin-left:2.2em">
-
-<h3 id="新建一个Github仓库"><a href="#新建一个Github仓库" class="headerlink" title="新建一个Github仓库"></a>新建一个Github仓库</h3><ol>
-<li>如下图在Github上创建</li>
-</ol>
-<img src="https://s1.ax1x.com/2020/08/03/adMDAJ.jpg" style="width:738px;margin-left:2em;box-shadow: 1px 1px 10px rgba(0,0,0,.5)">
-
-
-
-<ol start="2">
-<li><p>创建ssh key，配置git</p>
-<p>设置user.name和email(每次提交代码都会记录)</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> config --global user.name <span class="token string">"Github账户"</span>
-$ <span class="token function">git</span> config --global user.email <span class="token string">"Github注册邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>使用终端命令创建ssh key。创建过成功「三次回车」</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ ssh-keygen -t rsa -C <span class="token string">"Github注册邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>创建成功之后，会/Users/“username”/.ssh下生成id_rsa.pub。复制id_rsa.pub文件的代码。</p>
-<p>根据：Github用户下 -&gt; Settings -&gt; SSH and GPG keys -&gt; 点击New SSH key。粘贴至key中</p>
-</li>
-</ol>
-<img src="https://s1.ax1x.com/2020/08/03/ad8VQ1.jpg" style="width:738px;margin-left:2em;box-shadow: 1px 1px 10px rgba(0,0,0,.5)">
-
-
-
-<h4 id="访问不到username-github-io"><a href="#访问不到username-github-io" class="headerlink" title="访问不到username.github.io"></a>访问不到username.github.io</h4><p>​    使用 <strong><a href="https://app.clash.cat/#">凡云</a></strong> 进行访问。具体操作需要进行注册登录，感兴趣的可以试试看。根据网站中的 <strong>"下载和教程"</strong> 进行安全上网</p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><ul>
-<li><p>详细内容请查看<a href="https://hexo.io/zh-cn/docs/">Hexo官方文档</a></p>
-<p><strong>安装Hexo</strong></p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> hexo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><strong>初始化项目</strong></p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ hexo init blog
-$ <span class="token function">cd</span> blog
-$ <span class="token function">npm</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><strong>启动项目</strong></p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ hexo s <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>使用<a href="http://localhost:4000/">localhost:4000</a>查看。显示网页则本地博客搭建</p>
-<p>在站点配置文件 <code>……/blog/_config.yml</code>中搜索 <code>deplay</code>。将这部分的代码改成以下</p>
-<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
-  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
-  <span class="token key atrule">repository</span><span class="token punctuation">:</span> git@github.com<span class="token punctuation">:</span>username/username.github.io.git //使用ssh方式访问Git仓库
-  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>部署项目</strong></p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ hexo g
-$ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><strong>部署成功，访问<code>username.github.io</code>就能查看本地项目的博客样式</strong></p>
-<img src="https://s1.ax1x.com/2020/08/03/ad68UJ.jpg" style="width:738px;margin-left:1px;box-shadow: 1px 1px 10px rgba(0,0,0,.5)">
-
-</li>
-</ul>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://jrbcode.gitee.io/posts/63c4b34f.html">CodeHeap-快速使用Hexo搭建个人博客</a> 搭建过程很细节，样式涉及比较多，也很丰富</p>
+<h4 id="1-what-（什么是重构）"><a href="#1-what-（什么是重构）" class="headerlink" title="1. what?（什么是重构）"></a>1. what?（什么是重构）</h4><p>这是借用下百度的定义</p>
+<blockquote>
+<p>重构（Refactoring）就是通过调整程序代码改善软件的质量、性能，使其程序的设计模式和架构更趋合理，提高软件的扩展性和维护性。</p>
+</blockquote>
+<p><strong>个人理解：</strong>举个例子：保存用户信息的过程中，Controller层负责接收用户信息，Service层负责对用户信息进行处理，Dao层负责将用户信息保存到数据库中。当然系统中不仅只有保存用户信息的业务操作。还有用户信息修改，用户注销等等，越来越多的业务出现，系统就会变得很臃肿。</p>
+<h4 id="2-why-（为什么要重构）"><a href="#2-why-（为什么要重构）" class="headerlink" title="2. why? （为什么要重构）"></a>2. why? （为什么要重构）</h4><p>我们将系统划分为三个模块，表示层<code>web</code>，持久层<code>persistence</code>，模型层<code>model</code>。我们将项目启动的类，与用户进行数据交互的逻辑放在web表示层，将与数据库交互的逻辑放在persistence持久层，将保存信息的实体保存在model模型层。这样就显得业务划分和结构就变得很清晰</p>
+<h4 id="3-how-（怎么样重构）"><a href="#3-how-（怎么样重构）" class="headerlink" title="3. how? （怎么样重构）"></a>3. how? （怎么样重构）</h4><p>首先将<code>pom.xml</code>中的<code>packaging</code>改成pom</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght4zuxdz5j31km0tw7as.jpg" alt=""></p>
+<p>创建项目中的模块。<code>右键点击项目</code> -&gt; <code>New</code> -&gt; <code>Module</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght36701m4j30z60o67by.jpg" alt=""></p>
+<p>显示如下页面。点击<code>Next</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght36lrisyj31lo0u0wo3.jpg" alt=""></p>
+<p>填写需要创建模块的名字。继续点击<code>Next</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght377bctdj31lo0u0adt.jpg" alt=""></p>
+<p>如下图所示，创建好的模块的<code>pom.xml</code>中，<code>&lt;parent&gt;</code>是依赖于项目的<code>pom.xml</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght37p0h70j31iw0jw428.jpg" alt=""></p>
+<p>将系统的业务代码迁移到相应的模块中，会发现模块中的文档样式是不一样的。这时候需要进行一些调改。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght39vwv9qj30jy0gi75n.jpg" alt=""></p>
+<p>进入到<code>project structure</code>。点击<code>mian</code>中的<code>java</code>，在点击<code>Mark as</code>中的<code>Sources</code>。显而易见，<code>java</code>wenjianjia 变成原有项目的样子。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght3bgxpgvj310p0u00za.jpg" alt=""></p>
+<p>如果出现想启动类上边画了个X的样子，还是选择点击右边的绿色三角的话。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght5605bz2j311o07qt97.jpg" alt=""></p>
+<p>你将会看到下边的提示 <code>错误: 找不到或无法加载主类 FirstRefactorDemoApplication</code>。这时得找到项目的启动类进行重新启动</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght57jx15cj314a06q3zf.jpg" alt=""></p>
+<p><strong>启动项目：找到web模块中的启动类，<code>右键</code>+<code>Run</code>启动项目。</strong></p>
+<p>按照自己的要求将项目中的接口，实体类等迁移到各个模块之后，你是否会发现下面这种情况。项目中满屏都是红色的，那是因为，这些实体类在迁移到各个模块之后，他们之间还没有任何联系，<code>import</code>导入的依赖是找不到原来的依赖的。解决办法：通过配置的方式，将各个模块联系起来。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtldgelmuj320n0u014x.jpg" alt=""></p>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.xh<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>model<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span> 
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>0.0.1-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>artifactId</code>：所需要依赖的模块名称</p>
+<p><code>groupId</code>和<code>version</code>：可参照<code>pom.xml</code>文件中的<code>parent</code>中的配置。</p>
+<p><strong>注：每次修改<code>pom.xml</code>文件都必须在文件中<code>右键</code>+<code>maven</code>+<code>reimport</code>进行重新刷新</strong></p>
+<h4 id="项目打包"><a href="#项目打包" class="headerlink" title="项目打包"></a>项目打包</h4><p>打开idea的终端命令行<code>Terminal</code>。运行如下命令</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ mvn -Dmaven.test.skip<span class="token operator">=</span>true -U clean <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>发现这时候项目打包出问题，显示<strong>repackage failed: Unable to find main class</strong>。无法找到主类(main class)</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghts5farc1j31v30u0113.jpg" alt=""></p>
+<p>如果你的项目是多个模块的项目，则需要在包含启动类的(web)模块的<code>pom.xml</code>中添加如下配置。</p>
+<p>这块配置仅针对多模块的项目配置。</p>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
++      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
++        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mainClass</span><span class="token punctuation">></span></span>com.xh.product.ProductApplication<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mainClass</span><span class="token punctuation">></span></span>
++      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在<code>spring-boot-maven-plugin</code>下配置<code>configuration</code>中的配置。<code>mainClass</code>中配置项目的启动类的路径。</p>
+<p>配置完成之后，则再次执行上边的打包命令。<strong>打包好的jar默认会放在电脑配置的仓库中。</strong></p>
+<h4 id="引用自定义生成的jar包"><a href="#引用自定义生成的jar包" class="headerlink" title="引用自定义生成的jar包"></a>引用自定义生成的jar包</h4><p>如需要将打包好的jar给其他项目进行调用，则需要在其他项目<code>pom.xml</code>中引入。可参照我的进行配置。配置完成刷新<code>pom.xml</code>文件</p>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.xh<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>product-client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>0.0.1-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>配置完成之后，再次刷新<code>pom.xml</code>文件。这时项目就会根据下图的过程找到你的jar包并引入到项目中</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtuqqosfdj31la0s0n9d.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -634,12 +618,8 @@ $ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Mac/">
-                                    <span class="chip bg-color">Mac</span>
-                                </a>
-                            
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/">
+                                    <span class="chip bg-color">项目重构</span>
                                 </a>
                             
                         </div>
@@ -806,7 +786,7 @@ $ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
         repo: 'lsqi.github.io',
         owner: 'lsqi',
         admin: '["lsqi"]',
-        id: 'posts/42500.html',
+        id: 'posts/46268.html',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -829,53 +809,50 @@ $ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-            <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
                 <div class="article-badge left-badge text-color">
-                    <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                    <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+                </div>
                 <div class="card">
-                    <a href="/posts/63598.html">
+                    <a href="/posts/46268.html">
                         <div class="card-image">
                             
-                                <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghnd7g3x7qj327w0e8jwi.jpg" class="responsive-img" alt="Mac下配置NexT主题">
+                                
+                                <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="重构SpringBoot项目">
                             
-                            <span class="card-title">Mac下配置NexT主题</span>
+                            <span class="card-title">重构SpringBoot项目</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;详细内容请看 NexT官网文档
-
-&lt;blog name&gt;/_config.yml：站点配置文件
-
-themes/next/_config.yml：主题配置文
+                                
+最近在学习微服务的过程中，需要将之前学到的SpringBoot项目重构。
+个人在学习过程中参考 慕课网小马哥的 Spring Boot 2.0深度实践-初遇Spring Boot 这门课程是免费的。如果博客阐述不当，可以去看看小马哥的视频
                             
                         </div>
                         <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-17
+                            </span>
                             <span class="publish-author">
                                 
                                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                                     
-                                        <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
-                                    博客搭建
+                                        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
                                 </a>
                                     
                                 
                             </span>
                         </div>
                     </div>
+
                     
                         <div class="card-action article-tags">
                             
-                                <a href="/tags/Mac/">
-                                    <span class="chip bg-color">Mac</span>
-                                </a>
-                            
-                                <a href="/tags/NexT/">
-                                    <span class="chip bg-color">NexT</span>
+                                <a href="/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/">
+                                    <span class="chip bg-color">项目重构</span>
                                 </a>
                             
                         </div>
@@ -886,52 +863,51 @@ themes/next/_config.yml：主题配置文
         
             <div class="article col s12 m6" data-aos="fade-up">
                 <div class="article-badge right-badge text-color">
-                    本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                    下一篇&nbsp;<i class="fa fa-chevron-right"></i>
                 </div>
                 <div class="card">
-                    <a href="/posts/42500.html">
+                    <a href="/posts/45299.html">
                         <div class="card-image">
                             
-                                <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkda1kudxj308m04imx7.jpg" class="responsive-img" alt="Github+Hexo搭建个人博客">
+                                <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghnded2y74j30xe0igdj3.jpg" class="responsive-img" alt="抽象类和接口">
                             
-                            <span class="card-title">Github+Hexo搭建个人博客</span>
+                            <span class="card-title">抽象类和接口</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
                                 
-前言：最近自己用markdown写了一些博客，想着把自己写的东西也放在Github上。然后……自己的博客搭建了三天才完成。这过程也是蛮丰富的，一步一个脚印，一步一个坑啊。我把自己遇到的比较烦人的问题记下来，方便自己也方便大家 
+前言：当面试官在问到我这块知识点的时候，我整个人脑子只是冒出来interface和abstract这两个关键字。仅说出了接口和抽象类各自的特征，但是二者之间的异同点答得不是很好，这块知识点老是记不住，还是需要通过代码来了解比较直观。
 
-搭建环境
+接
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-02
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-12
                             </span>
                             <span class="publish-author">
                                 
                                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                                     
-                                        <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
-                                    博客搭建
+                                        <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Java基础
                                 </a>
                                     
                                 
                             </span>
                         </div>
                     </div>
-
                     
                         <div class="card-action article-tags">
                             
-                                <a href="/tags/Mac/">
-                                    <span class="chip bg-color">Mac</span>
+                                <a href="/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/">
+                                    <span class="chip bg-color">抽象类</span>
                                 </a>
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/%E6%8E%A5%E5%8F%A3/">
+                                    <span class="chip bg-color">接口</span>
                                 </a>
                             
                         </div>
