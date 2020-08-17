@@ -23,14 +23,14 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/friends/index.html</loc>
+    <loc>https://lsqi.github.io/tags/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/index.html</loc>
+    <loc>https://lsqi.github.io/friends/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
@@ -151,7 +151,7 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/Hexo/</loc>
+    <loc>https://lsqi.github.io/tags/http%E5%8D%8F%E8%AE%AE/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -165,21 +165,21 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/http%E5%8D%8F%E8%AE%AE/</loc>
+    <loc>https://lsqi.github.io/tags/Hexo/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/</loc>
+    <loc>https://lsqi.github.io/tags/homebrew/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/%E6%8E%A5%E5%8F%A3/</loc>
+    <loc>https://lsqi.github.io/tags/openResty/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -200,14 +200,14 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/homebrew/</loc>
+    <loc>https://lsqi.github.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/openResty/</loc>
+    <loc>https://lsqi.github.io/tags/%E6%8E%A5%E5%8F%A3/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
