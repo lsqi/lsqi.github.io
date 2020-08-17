@@ -5,9 +5,9 @@
   <subtitle>[object Object]</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://lsqi.github.io/"/>
+  <link href="http://lishengqi.gitee.io/"/>
   <updated>2020-08-17T08:02:29.319Z</updated>
-  <id>https://lsqi.github.io/</id>
+  <id>http://lishengqi.gitee.io/</id>
   
   <author>
     <name>小黑</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>重构SpringBoot项目</title>
-    <link href="https://lsqi.github.io/posts/46268.html"/>
-    <id>https://lsqi.github.io/posts/46268.html</id>
+    <link href="http://lishengqi.gitee.io/posts/46268.html"/>
+    <id>http://lishengqi.gitee.io/posts/46268.html</id>
     <published>2020-08-16T16:01:38.000Z</published>
     <updated>2020-08-17T08:02:29.319Z</updated>
     
@@ -37,17 +37,17 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="项目重构" scheme="https://lsqi.github.io/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/"/>
+      <category term="项目重构" scheme="http://lishengqi.gitee.io/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>抽象类和接口</title>
-    <link href="https://lsqi.github.io/posts/45299.html"/>
-    <id>https://lsqi.github.io/posts/45299.html</id>
+    <link href="http://lishengqi.gitee.io/posts/45299.html"/>
+    <id>http://lishengqi.gitee.io/posts/45299.html</id>
     <published>2020-08-11T16:39:45.000Z</published>
     <updated>2020-08-14T15:43:24.830Z</updated>
     
@@ -65,19 +65,19 @@
     </summary>
     
     
-      <category term="Java基础" scheme="https://lsqi.github.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java基础" scheme="http://lishengqi.gitee.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="抽象类" scheme="https://lsqi.github.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
+      <category term="抽象类" scheme="http://lishengqi.gitee.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
     
-      <category term="接口" scheme="https://lsqi.github.io/tags/%E6%8E%A5%E5%8F%A3/"/>
+      <category term="接口" scheme="http://lishengqi.gitee.io/tags/%E6%8E%A5%E5%8F%A3/"/>
     
   </entry>
   
   <entry>
     <title>项目打包运行在后台</title>
-    <link href="https://lsqi.github.io/posts/63379.html"/>
-    <id>https://lsqi.github.io/posts/63379.html</id>
+    <link href="http://lishengqi.gitee.io/posts/63379.html"/>
+    <id>http://lishengqi.gitee.io/posts/63379.html</id>
     <published>2020-08-08T08:45:41.000Z</published>
     <updated>2020-08-14T15:41:30.120Z</updated>
     
@@ -96,19 +96,19 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="java" scheme="https://lsqi.github.io/tags/java/"/>
+      <category term="java" scheme="http://lishengqi.gitee.io/tags/java/"/>
     
-      <category term="linux" scheme="https://lsqi.github.io/tags/linux/"/>
+      <category term="linux" scheme="http://lishengqi.gitee.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>http学习</title>
-    <link href="https://lsqi.github.io/posts/64520.html"/>
-    <id>https://lsqi.github.io/posts/64520.html</id>
+    <link href="http://lishengqi.gitee.io/posts/64520.html"/>
+    <id>http://lishengqi.gitee.io/posts/64520.html</id>
     <published>2020-08-08T08:42:08.000Z</published>
     <updated>2020-08-14T15:41:48.284Z</updated>
     
@@ -124,17 +124,17 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="http协议" scheme="https://lsqi.github.io/tags/http%E5%8D%8F%E8%AE%AE/"/>
+      <category term="http协议" scheme="http://lishengqi.gitee.io/tags/http%E5%8D%8F%E8%AE%AE/"/>
     
   </entry>
   
   <entry>
     <title>使用homebrew安装openResty</title>
-    <link href="https://lsqi.github.io/posts/14066.html"/>
-    <id>https://lsqi.github.io/posts/14066.html</id>
+    <link href="http://lishengqi.gitee.io/posts/14066.html"/>
+    <id>http://lishengqi.gitee.io/posts/14066.html</id>
     <published>2020-08-08T08:41:58.000Z</published>
     <updated>2020-08-14T15:41:15.883Z</updated>
     
@@ -152,19 +152,19 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="homebrew" scheme="https://lsqi.github.io/tags/homebrew/"/>
+      <category term="homebrew" scheme="http://lishengqi.gitee.io/tags/homebrew/"/>
     
-      <category term="openResty" scheme="https://lsqi.github.io/tags/openResty/"/>
+      <category term="openResty" scheme="http://lishengqi.gitee.io/tags/openResty/"/>
     
   </entry>
   
   <entry>
     <title>mac下安装maven</title>
-    <link href="https://lsqi.github.io/posts/59524.html"/>
-    <id>https://lsqi.github.io/posts/59524.html</id>
+    <link href="http://lishengqi.gitee.io/posts/59524.html"/>
+    <id>http://lishengqi.gitee.io/posts/59524.html</id>
     <published>2020-08-08T08:41:36.000Z</published>
     <updated>2020-08-14T15:42:03.754Z</updated>
     
@@ -183,21 +183,21 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
     
-      <category term="maven" scheme="https://lsqi.github.io/tags/maven/"/>
+      <category term="maven" scheme="http://lishengqi.gitee.io/tags/maven/"/>
     
-      <category term="环境变量" scheme="https://lsqi.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+      <category term="环境变量" scheme="http://lishengqi.gitee.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     
   </entry>
   
   <entry>
     <title>Mac下配置NexT主题</title>
-    <link href="https://lsqi.github.io/posts/63598.html"/>
-    <id>https://lsqi.github.io/posts/63598.html</id>
+    <link href="http://lishengqi.gitee.io/posts/63598.html"/>
+    <id>http://lishengqi.gitee.io/posts/63598.html</id>
     <published>2020-08-02T15:03:39.000Z</published>
     <updated>2020-08-16T17:01:43.131Z</updated>
     
@@ -215,19 +215,19 @@
     </summary>
     
     
-      <category term="博客搭建" scheme="https://lsqi.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="http://lishengqi.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
     
-      <category term="NexT" scheme="https://lsqi.github.io/tags/NexT/"/>
+      <category term="NexT" scheme="http://lishengqi.gitee.io/tags/NexT/"/>
     
   </entry>
   
   <entry>
     <title>Github+Hexo搭建个人博客</title>
-    <link href="https://lsqi.github.io/posts/42500.html"/>
-    <id>https://lsqi.github.io/posts/42500.html</id>
+    <link href="http://lishengqi.gitee.io/posts/42500.html"/>
+    <id>http://lishengqi.gitee.io/posts/42500.html</id>
     <published>2020-08-02T06:08:09.861Z</published>
     <updated>2020-08-14T15:42:10.177Z</updated>
     
@@ -244,12 +244,12 @@
     </summary>
     
     
-      <category term="博客搭建" scheme="https://lsqi.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="http://lishengqi.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
     
-      <category term="Hexo" scheme="https://lsqi.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://lishengqi.gitee.io/tags/Hexo/"/>
     
   </entry>
   
