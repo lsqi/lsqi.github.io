@@ -5,9 +5,9 @@
   <subtitle>[object Object]</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://lishengqi.gitee.io/"/>
-  <updated>2020-08-17T07:48:19.008Z</updated>
-  <id>http://lishengqi.gitee.io/</id>
+  <link href="https://lsqi.github.io/"/>
+  <updated>2020-08-17T07:51:12.186Z</updated>
+  <id>https://lsqi.github.io/</id>
   
   <author>
     <name>小黑</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>重构SpringBoot项目</title>
-    <link href="http://lishengqi.gitee.io/posts/46268.html"/>
-    <id>http://lishengqi.gitee.io/posts/46268.html</id>
+    <link href="https://lsqi.github.io/posts/46268.html"/>
+    <id>https://lsqi.github.io/posts/46268.html</id>
     <published>2020-08-16T16:01:38.000Z</published>
-    <updated>2020-08-17T07:48:19.008Z</updated>
+    <updated>2020-08-17T07:51:12.186Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>最近在学习微服务的过程中，需要将之前学到的SpringBoot项目重构。</p><p>个人在学习过程中参考 慕课网小马哥的 <a href="https://www.imooc.com/learn/933">Spring Boot 2.0深度实践-初遇Spring Boot</a> 这门课程是免费的。如果博客阐述不当，可以去看看小马哥的视频，大佬绝对把你教会。</p></blockquote><h4 id="1-what-（什么是重构）"><a href="#1-what-（什么是重构）" class="headerlink" title="1. what?（什么是重构）"></a>1. what?（什么是重构）</h4><p>这是借用下百度的定义</p><blockquote><p>重构（Refactoring）就是通过调整程序代码改善软件的质量、性能，使其程序的设计模式和架构更趋合理，提高软件的扩展性和维护性。</p></blockquote><p><strong>个人理解：</strong>举个例子：保存用户信息的过程中，Controller层负责接收用户信息，Service层负责对用户信息进行处理，Dao层负责将用户信息保存到数据库中。当然系统中不仅只有保存用户信息的业务操作。还有用户信息修改，用户注销等等，越来越多的业务出现，系统就会变得很臃肿。</p><h4 id="2-why-（为什么要重构）"><a href="#2-why-（为什么要重构）" class="headerlink" title="2. why? （为什么要重构）"></a>2. why? （为什么要重构）</h4><p>我们将系统划分为三个模块，表示层<code>web</code>，持久层<code>persistence</code>，模型层<code>model</code>。我们将项目启动的类，与用户进行数据交互的逻辑放在web表示层，将与数据库交互的逻辑放在persistence持久层，将保存信息的实体保存在model模型层。这样就显得业务划分和结构就变得很清晰</p><h4 id="3-how-（怎么样重构）"><a href="#3-how-（怎么样重构）" class="headerlink" title="3. how? （怎么样重构）"></a>3. how? （怎么样重构）</h4><p>首先将<code>pom.xml</code>中的<code>packaging</code>改成pom</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght4zuxdz5j31km0tw7as.jpg" alt=""></p><p>创建项目中的模块。<code>右键点击项目</code> -&gt; <code>New</code> -&gt; <code>Module</code></p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght36701m4j30z60o67by.jpg" alt=""></p><p>显示如下页面。点击<code>Next</code></p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght36lrisyj31lo0u0wo3.jpg" alt=""></p><p>填写需要创建模块的名字。继续点击<code>Next</code></p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght377bctdj31lo0u0adt.jpg" alt=""></p><p>如下图所示，创建好的模块的<code>pom.xml</code>中，<code>&lt;parent&gt;</code>是依赖于项目的<code>pom.xml</code></p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght37p0h70j31iw0jw428.jpg" alt=""></p><p>将系统的业务代码迁移到相应的模块中，会发现模块中的文档样式是不一样的。这时候需要进行一些调改。</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght39vwv9qj30jy0gi75n.jpg" alt=""></p><p>进入到<code>project structure</code>。点击<code>mian</code>中的<code>java</code>，在点击<code>Mark as</code>中的<code>Sources</code>。显而易见，<code>java</code>wenjianjia 变成原有项目的样子。</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght3bgxpgvj310p0u00za.jpg" alt=""></p><p>如果出现想启动类上边画了个X的样子，还是选择点击右边的绿色三角的话。</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght5605bz2j311o07qt97.jpg" alt=""></p><p>你将会看到下边的提示 <code>错误: 找不到或无法加载主类 FirstRefactorDemoApplication</code>。这时得找到项目的启动类进行重新启动</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ght57jx15cj314a06q3zf.jpg" alt=""></p><p><strong>启动项目：找到web模块中的启动类，<code>右键</code>+<code>Run</code>启动项目。</strong></p><p>按照自己的要求将项目中的接口，实体类等迁移到各个模块之后，你是否会发现下面这种情况。项目中满屏都是红色的，那是因为，这些实体类在迁移到各个模块之后，他们之间还没有任何联系，<code>import</code>导入的依赖是找不到原来的依赖的。解决办法：通过配置的方式，将各个模块联系起来。</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtldgelmuj320n0u014x.jpg" alt=""></p><pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.xh<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>model<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>0.0.1-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>artifactId</code>：所需要依赖的模块名称</p><p><code>groupId</code>和<code>version</code>：可参照<code>pom.xml</code>文件中的<code>parent</code>中的配置。</p><p><strong>注：每次修改<code>pom.xml</code>文件都必须在文件中<code>右键</code>+<code>maven</code>+<code>reimport</code>进行重新刷新</strong></p><h4 id="项目打包"><a href="#项目打包" class="headerlink" title="项目打包"></a>项目打包</h4><p>打开idea的终端命令行<code>Terminal</code>。运行如下命令</p><pre class="line-numbers language-bash"><code class="language-bash">$ mvn -Dmaven.test.skip<span class="token operator">=</span>true -U clean <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>发现这时候项目打包出问题，显示<strong>repackage failed: Unable to find main class</strong>。无法找到主类(main class)</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghts5farc1j31v30u0113.jpg" alt=""></p><p>如果你的项目是多个模块的项目，则需要在包含启动类的(web)模块的<code>pom.xml</code>中添加如下配置。</p><p>这块配置仅针对多模块的项目配置。</p><pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">></span></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mainClass</span><span class="token punctuation">></span></span>com.xh.product.ProductApplication<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mainClass</span><span class="token punctuation">></span></span>+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在<code>spring-boot-maven-plugin</code>下配置<code>configuration</code>中的配置。<code>mainClass</code>中配置项目的启动类的路径。</p><p>配置完成之后，则再次执行上边的打包命令。<strong>打包好的jar默认会放在电脑配置的仓库中。</strong></p><h4 id="引用自定义生成的jar包"><a href="#引用自定义生成的jar包" class="headerlink" title="引用自定义生成的jar包"></a>引用自定义生成的jar包</h4><p>如需要将打包好的jar给其他项目进行调用，则需要在其他项目<code>pom.xml</code>中引入。可参照我的进行配置。配置完成刷新<code>pom.xml</code>文件</p><pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.xh<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>product-client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>0.0.1-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>配置完成之后，再次刷新<code>pom.xml</code>文件。这时项目就会根据下图的过程找到你的jar包并引入到项目中</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtuqqosfdj31la0s0n9d.jpg" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -37,17 +37,17 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="项目重构" scheme="http://lishengqi.gitee.io/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/"/>
+      <category term="项目重构" scheme="https://lsqi.github.io/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>抽象类和接口</title>
-    <link href="http://lishengqi.gitee.io/posts/45299.html"/>
-    <id>http://lishengqi.gitee.io/posts/45299.html</id>
+    <link href="https://lsqi.github.io/posts/45299.html"/>
+    <id>https://lsqi.github.io/posts/45299.html</id>
     <published>2020-08-11T16:39:45.000Z</published>
     <updated>2020-08-14T15:43:24.830Z</updated>
     
@@ -65,19 +65,19 @@
     </summary>
     
     
-      <category term="Java基础" scheme="http://lishengqi.gitee.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java基础" scheme="https://lsqi.github.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="抽象类" scheme="http://lishengqi.gitee.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
+      <category term="抽象类" scheme="https://lsqi.github.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
     
-      <category term="接口" scheme="http://lishengqi.gitee.io/tags/%E6%8E%A5%E5%8F%A3/"/>
+      <category term="接口" scheme="https://lsqi.github.io/tags/%E6%8E%A5%E5%8F%A3/"/>
     
   </entry>
   
   <entry>
     <title>项目打包运行在后台</title>
-    <link href="http://lishengqi.gitee.io/posts/63379.html"/>
-    <id>http://lishengqi.gitee.io/posts/63379.html</id>
+    <link href="https://lsqi.github.io/posts/63379.html"/>
+    <id>https://lsqi.github.io/posts/63379.html</id>
     <published>2020-08-08T08:45:41.000Z</published>
     <updated>2020-08-14T15:41:30.120Z</updated>
     
@@ -96,19 +96,19 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="java" scheme="http://lishengqi.gitee.io/tags/java/"/>
+      <category term="java" scheme="https://lsqi.github.io/tags/java/"/>
     
-      <category term="linux" scheme="http://lishengqi.gitee.io/tags/linux/"/>
+      <category term="linux" scheme="https://lsqi.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>http学习</title>
-    <link href="http://lishengqi.gitee.io/posts/64520.html"/>
-    <id>http://lishengqi.gitee.io/posts/64520.html</id>
+    <link href="https://lsqi.github.io/posts/64520.html"/>
+    <id>https://lsqi.github.io/posts/64520.html</id>
     <published>2020-08-08T08:42:08.000Z</published>
     <updated>2020-08-14T15:41:48.284Z</updated>
     
@@ -124,17 +124,17 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="http协议" scheme="http://lishengqi.gitee.io/tags/http%E5%8D%8F%E8%AE%AE/"/>
+      <category term="http协议" scheme="https://lsqi.github.io/tags/http%E5%8D%8F%E8%AE%AE/"/>
     
   </entry>
   
   <entry>
     <title>使用homebrew安装openResty</title>
-    <link href="http://lishengqi.gitee.io/posts/14066.html"/>
-    <id>http://lishengqi.gitee.io/posts/14066.html</id>
+    <link href="https://lsqi.github.io/posts/14066.html"/>
+    <id>https://lsqi.github.io/posts/14066.html</id>
     <published>2020-08-08T08:41:58.000Z</published>
     <updated>2020-08-14T15:41:15.883Z</updated>
     
@@ -152,19 +152,19 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="homebrew" scheme="http://lishengqi.gitee.io/tags/homebrew/"/>
+      <category term="homebrew" scheme="https://lsqi.github.io/tags/homebrew/"/>
     
-      <category term="openResty" scheme="http://lishengqi.gitee.io/tags/openResty/"/>
+      <category term="openResty" scheme="https://lsqi.github.io/tags/openResty/"/>
     
   </entry>
   
   <entry>
     <title>mac下安装maven</title>
-    <link href="http://lishengqi.gitee.io/posts/59524.html"/>
-    <id>http://lishengqi.gitee.io/posts/59524.html</id>
+    <link href="https://lsqi.github.io/posts/59524.html"/>
+    <id>https://lsqi.github.io/posts/59524.html</id>
     <published>2020-08-08T08:41:36.000Z</published>
     <updated>2020-08-14T15:42:03.754Z</updated>
     
@@ -183,21 +183,21 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
+      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
     
-      <category term="maven" scheme="http://lishengqi.gitee.io/tags/maven/"/>
+      <category term="maven" scheme="https://lsqi.github.io/tags/maven/"/>
     
-      <category term="环境变量" scheme="http://lishengqi.gitee.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+      <category term="环境变量" scheme="https://lsqi.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     
   </entry>
   
   <entry>
     <title>Mac下配置NexT主题</title>
-    <link href="http://lishengqi.gitee.io/posts/63598.html"/>
-    <id>http://lishengqi.gitee.io/posts/63598.html</id>
+    <link href="https://lsqi.github.io/posts/63598.html"/>
+    <id>https://lsqi.github.io/posts/63598.html</id>
     <published>2020-08-02T15:03:39.000Z</published>
     <updated>2020-08-16T17:01:43.131Z</updated>
     
@@ -215,19 +215,19 @@
     </summary>
     
     
-      <category term="博客搭建" scheme="http://lishengqi.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="https://lsqi.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
+      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
     
-      <category term="NexT" scheme="http://lishengqi.gitee.io/tags/NexT/"/>
+      <category term="NexT" scheme="https://lsqi.github.io/tags/NexT/"/>
     
   </entry>
   
   <entry>
     <title>Github+Hexo搭建个人博客</title>
-    <link href="http://lishengqi.gitee.io/posts/42500.html"/>
-    <id>http://lishengqi.gitee.io/posts/42500.html</id>
+    <link href="https://lsqi.github.io/posts/42500.html"/>
+    <id>https://lsqi.github.io/posts/42500.html</id>
     <published>2020-08-02T06:08:09.861Z</published>
     <updated>2020-08-14T15:42:10.177Z</updated>
     
@@ -244,12 +244,12 @@
     </summary>
     
     
-      <category term="博客搭建" scheme="http://lishengqi.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="https://lsqi.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
+      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
     
-      <category term="Hexo" scheme="http://lishengqi.gitee.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://lsqi.github.io/tags/Hexo/"/>
     
   </entry>
   
