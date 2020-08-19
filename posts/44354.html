@@ -4,16 +4,10 @@
 
 <head><link rel=manifest href=/manifest.json>
     <meta charset="utf-8">
-    <meta name="keywords" content="项目打包运行在后台, 博客 新手搭建博客 Java">
+    <meta name="keywords" content="Spring Cloud Bus 配置文件实现自动更新, 博客 新手搭建博客 Java">
     <meta name="description" content="
-进入到项目的路径下，输入以下命令完成项目打包
-
-$ mvn clean package
-
-打包好的项目默认在项目目录中的target文件夹中，
-
-
-  target中的eureka-0.0.1-SNAPSHOT.jar就是打包好的jar包">
+上篇文章中描述了使用git仓库保存项目的配置文件，其他项目通过关联配置中心，实现统一配置中心。
+在生产环境中，很少通过重启项目来改变项目的配置文件的。本篇将对Spring Cloud Bus如何实现保证项目运行的过程下，改变远程git仓库">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +16,7 @@ $ mvn clean package
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="white"/>
-    <title>项目打包运行在后台 | Xiao Hei&#39;Blog</title>
+    <title>Spring Cloud Bus 配置文件实现自动更新 | Xiao Hei&#39;Blog</title>
     <link rel="apple-touch-icon" href="/null">
     <link rel="icon" type="image/png" href="/medias/jingyu.png">
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -348,12 +342,12 @@ $ mvn clean package
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://tva1.sinaimg.cn/large/007S8ZIlly1ghnd16xu2kj308n04idg0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">项目打包运行在后台</h1>
+                    <h1 class="description center-align post-title">Spring Cloud Bus 配置文件实现自动更新</h1>
                 </div>
             </div>
         </div>
@@ -468,28 +462,11 @@ $ mvn clean package
                 <div class="col s7">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
-                                </a>
-                            
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                        <div class="post-cate">
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                                <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    学习笔记
-                                </a>
-                            
-                        </div>
                     
                 </div>
             </div>
@@ -500,21 +477,21 @@ $ mvn clean package
                 
                     <div class="post-date info-break-policy">
                         <i class="fa fa-calendar-check-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                        2020-08-14
+                        2020-08-19
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        235
+                        640
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                 
 
@@ -529,32 +506,51 @@ $ mvn clean package
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li>进入到项目的路径下，输入以下命令完成项目打包</li>
+                <blockquote>
+<p>上篇文章中描述了使用git仓库保存项目的配置文件，其他项目通过关联配置中心，实现统一配置中心。</p>
+<p>在生产环境中，很少通过重启项目来改变项目的配置文件的。本篇将对Spring Cloud Bus如何实现保证项目运行的过程下，改变远程git仓库中的配置文件，看下项目中是否会自动刷新这些配置呢？</p>
+</blockquote>
+<p>这里借用下廖师兄的图</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghvc6r33ykj31kf0u0tjj.jpg" alt=""></p>
+<p>我们在配置中心<code>config-server</code>和<code>order</code>中添加<code>Spring Cloud Bus</code>的依赖</p>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-starter-bus-amqp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>之所以引入上述的依赖，是因为我们要通过这个依赖将项目和RabbitMQ联系起来。分别启动配置中心和product。启动成功之后，我们可以看到在RabbitMQ的<code>Queues</code>中看到我们启动的项目。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghvcbx41z3j32620r6dlt.jpg" alt=""></p>
+<p>到了这里，我们使用RabbitMQ实现了<code>config-server</code>和<code>product</code>之间的通讯。我们修改远程git仓库的配置文件，这时候我们是不知道仓库是做了什么配置。因为仓库没通知我它改了配置文件，<code>config-server</code>获取的数据还是之前获取到的数据的。这时候，我们需要做什么呢？</p>
+<ol>
+<li><code>config-server</code>暴露<code>bus-refresh</code>，让远程git仓库在改变配置文件之后，调接口通知<code>config-server</code>配置中心。需要在<code>pom.xml</code>中添加配置。</li>
 </ol>
-<pre class="line-numbers language-bash"><code class="language-bash">$ mvn clean package<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-yml"><code class="language-yml"># 让bus-refresh接口暴露出来
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ol start="2">
-<li>打包好的项目默认在项目目录中的<code>target</code>文件夹中，</li>
+<li>远程git通知配置中心，远程git仓库的配置文件有更新。在本地命令行中模拟git向<code>config-server</code>发送通知。</li>
 </ol>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gheuzmi1xsj30m607ygp5.jpg" alt=""></p>
-<p>  <strong><code>target</code>中的<code>eureka-0.0.1-SNAPSHOT.jar</code>就是打包好的jar包。</strong></p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ curl -v -X POST <span class="token string">"http://localhost:8080/actuator/bus-refresh"</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ol start="3">
-<li>使用java命令启动项目</li>
+<li><strong>(坑)</strong>这时候你刷新你的uri地址发现，配置还是没有刷新出来。</li>
 </ol>
-<pre class="line-numbers language-bash"><code class="language-bash">$ java -jar target/eureka-0.0.1-SNAPSHOT.jar<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>​    程序启动如下图(可使用<code>ctrl+c</code>断开链接)：</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghev4rm6icj30vo0p4qib.jpg" alt=""></p>
-<ol start="4">
-<li>使用如下命令可以使得项目在后台中启动</li>
-</ol>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">nohup</span> java -jar target/eureka-0.0.1-SNAPSHOT.jar <span class="token operator">></span> /dev/null 2<span class="token operator">></span><span class="token operator">&amp;</span>1 <span class="token operator">&amp;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>​    会生成后台的进程号</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghev9on2n4j30v8030gn5.jpg" alt=""></p>
-<p>​    使用以下命令可以查看这个进程的状态和信息</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">ps</span> -ef <span class="token operator">|</span><span class="token function">grep</span> eureka //进程名字
-$ <span class="token function">ps</span> -ef <span class="token operator">|</span><span class="token function">grep</span> 25746 //进程标识<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>​    如需”杀死”该进程</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">kill</span> -9 25746 // 26349<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>该怎么做配置才能被获取到呢？需要在获取配置的类上边加上<code>@RefreshScope</code>这个注解。使用<code>@RefreshScope</code>表示：告诉系统要对标注<code>@RefreshScope</code>的类进行配置刷新</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@RestController</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/env"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RefreshScope</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ConfigController</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${env}"</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// TODO @Value("${env}")获取配置文件中env的值 如env = "config"</span>
+    <span class="token keyword">private</span> String env<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/getConfig"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> String <span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> env<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// TODO 返回config</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>再次启动项目，修改配置，启动中的项目访问到修改好的配置。本地的项目实现了配置文件的自动更新</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -585,15 +581,7 @@ $ <span class="token function">ps</span> -ef <span class="token operator">|</spa
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
-                                </a>
-                            
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -758,7 +746,7 @@ $ <span class="token function">ps</span> -ef <span class="token operator">|</spa
         repo: 'lsqi.github.io',
         owner: 'lsqi',
         admin: '["lsqi"]',
-        id: 'posts/63379.html',
+        id: 'posts/44354.html',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -781,55 +769,41 @@ $ <span class="token function">ps</span> -ef <span class="token operator">|</spa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-            <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
                 <div class="article-badge left-badge text-color">
-                    <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                    <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+                </div>
                 <div class="card">
-                    <a href="/posts/45299.html">
+                    <a href="/posts/44354.html">
                         <div class="card-image">
                             
-                                <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghnded2y74j30xe0igdj3.jpg" class="responsive-img" alt="抽象类和接口">
+                                
+                                <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Spring Cloud Bus 配置文件实现自动更新">
                             
-                            <span class="card-title">抽象类和接口</span>
+                            <span class="card-title">Spring Cloud Bus 配置文件实现自动更新</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
                                 
-前言：当面试官在问到我这块知识点的时候，我整个人脑子只是冒出来interface和abstract这两个关键字。仅说出了接口和抽象类各自的特征，但是二者之间的异同点答得不是很好，这块知识点老是记不住，还是需要通过代码来了解比较直观。
-
-接
+上篇文章中描述了使用git仓库保存项目的配置文件，其他项目通过关联配置中心，实现统一配置中心。
+在生产环境中，很少通过重启项目来改变项目的配置文件的。本篇将对Spring Cloud Bus如何实现保证项目运行的过程下，改变远程git仓库
                             
                         </div>
                         <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-18
+                            </span>
                             <span class="publish-author">
                                 
-                                    <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                    
-                                        <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    Java基础
-                                </a>
-                                    
+                                    <i class="fa fa-user fa-fw"></i>
+                                    小黑
                                 
                             </span>
                         </div>
                     </div>
-                    
-                        <div class="card-action article-tags">
-                            
-                                <a href="/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/">
-                                    <span class="chip bg-color">抽象类</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%8E%A5%E5%8F%A3/">
-                                    <span class="chip bg-color">接口</span>
-                                </a>
-                            
-                        </div>
+
                     
                 </div>
             </div>
@@ -840,50 +814,40 @@ $ <span class="token function">ps</span> -ef <span class="token operator">|</spa
                     下一篇&nbsp;<i class="fa fa-chevron-right"></i>
                 </div>
                 <div class="card">
-                    <a href="/posts/64520.html">
+                    <a href="/posts/32221.html">
                         <div class="card-image">
                             
-                                <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghnd06gaqij307n053q34.jpg" class="responsive-img" alt="http学习">
+                                
+                                <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="spring cloud config">
                             
-                            <span class="card-title">http学习</span>
+                            <span class="card-title">spring cloud config</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                HTTP 协议始于三十年多前蒂姆·伯纳斯 - 李的一篇论文；论文中确立了三项关键技术
+                                
+学习Spring Cloud Config
 
-URI：即统一资源标识符，作为互联网上资源的唯一身份；
-HTML：即超文本标记语言，描述超文本文档；
-HTTP：即超文本传输协议，用来传输超文本。
+要学习这部分的知识需要先了解配置中心的工作流程
 
-H
+配置中心服务器端配置中心的依赖
+&lt;dependency>
+  &lt;groupId>org.springframework.cloud
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-08
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-18
                             </span>
                             <span class="publish-author">
                                 
-                                    <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                    
-                                        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    学习笔记
-                                </a>
-                                    
+                                    <i class="fa fa-user fa-fw"></i>
+                                    小黑
                                 
                             </span>
                         </div>
                     </div>
-                    
-                        <div class="card-action article-tags">
-                            
-                                <a href="/tags/http%E5%8D%8F%E8%AE%AE/">
-                                    <span class="chip bg-color">http协议</span>
-                                </a>
-                            
-                        </div>
                     
                 </div>
             </div>
