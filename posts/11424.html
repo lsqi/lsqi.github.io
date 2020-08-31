@@ -4,12 +4,13 @@
 
 <head><link rel=manifest href=/manifest.json>
     <meta charset="utf-8">
-    <meta name="keywords" content="Mac下配置NexT主题, 博客 新手搭建博客 Java">
-    <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;详细内容请看 NexT官网文档
+    <meta name="keywords" content="项目中RabbitMQ的基本使用, 博客 新手搭建博客 Java">
+    <meta name="description" content="
+简单介绍在项目中基本使用RabbitMQ，从RabbitMQ的接收和发送信息来举例
 
-&amp;lt;blog name&amp;gt;/_config.yml：站点配置文件
-
-themes/next/_config.yml：主题配置文">
+RabbitMQ的引入项目引入spring cloud Bus的依赖，完成项目中服务与RabbitMQ的连接
+&amp;lt;dependency&gt;
+    &amp;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +19,7 @@ themes/next/_config.yml：主题配置文">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="white"/>
-    <title>Mac下配置NexT主题 | Xiao Hei&#39;Blog</title>
+    <title>项目中RabbitMQ的基本使用 | Xiao Hei&#39;Blog</title>
     <link rel="apple-touch-icon" href="/null">
     <link rel="icon" type="image/png" href="/medias/jingyu.png">
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -344,12 +345,12 @@ themes/next/_config.yml：主题配置文">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://tva1.sinaimg.cn/large/007S8ZIlly1ghnd7g3x7qj327w0e8jwi.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Mac下配置NexT主题</h1>
+                    <h1 class="description center-align post-title">项目中RabbitMQ的基本使用</h1>
                 </div>
             </div>
         </div>
@@ -465,12 +466,8 @@ themes/next/_config.yml：主题配置文">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Mac/">
-                                    <span class="chip bg-color">Mac</span>
-                                </a>
-                            
-                                <a href="/tags/NexT/">
-                                    <span class="chip bg-color">NexT</span>
+                                <a href="/tags/RabbitMQ/">
+                                    <span class="chip bg-color">RabbitMQ</span>
                                 </a>
                             
                         </div>
@@ -481,8 +478,8 @@ themes/next/_config.yml：主题配置文">
                         <div class="post-cate">
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                                <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
-                                    博客搭建
+                                <a href="/categories/Spring-Cloud/" class="post-category">
+                                    Spring Cloud
                                 </a>
                             
                         </div>
@@ -496,21 +493,21 @@ themes/next/_config.yml：主题配置文">
                 
                     <div class="post-date info-break-policy">
                         <i class="fa fa-calendar-check-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                        2020-08-19
+                        2020-08-31
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        593
+                        329
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        1 分
                     </div>
                 
 
@@ -525,95 +522,39 @@ themes/next/_config.yml：主题配置文">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;详细内容请看 <strong><a href="https://theme-next.iissnan.com/">NexT官网文档</a></strong></p>
-<ul>
-<li><p><strong>&lt;blog name&gt;/_config.yml：<font color="Lightblue">站点配置文件</font></strong></p>
-</li>
-<li><p><strong>themes/next/_config.yml：<font color="pink">主题配置文件</font></strong></p>
-</li>
-</ul>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><table><tbody><tr><td bgcolor="lightblue"><strong>注意⚠️：查看NexT的Github仓库 <a href="https://github.com/theme-next/hexo-theme-next">hexo-themes-next</a> 确定NexT主题的克隆地址是否正确。</strong></td></tr></tbody></table>
-* **使用Git安装**  将NexT主题克隆到themes/next中
-
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> clone https://github.com/theme-next/hexo-theme-next.git themes/next <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li><strong>修改站点配置文件</strong> 注意next内容前面需要使用空格隔开，hexo可能会识别不到</li>
-</ul>
-<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span> next<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><strong>设置更多精彩样式请看 <a href="https://jrbcode.gitee.io/posts/63c4b34f.html">CodeHeap-快速使用Hexo搭建个人博客</a></strong> </p>
-<ul>
-<li>启动项目</li>
-</ul>
-<pre class="line-numbers language-bash"><code class="language-bash">$ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>查看  <strong><a href="http://localhost:4000/">localhost:4000</a></strong>  </li>
-</ul>
-<h3 id="NexT主题优化"><a href="#NexT主题优化" class="headerlink" title="NexT主题优化"></a>NexT主题优化</h3><h4 id="设置背景"><a href="#设置背景" class="headerlink" title="设置背景"></a>设置背景</h4><ul>
-<li>在主题配置文件中搜索<code>custom_file_path</code>，在<code>source/_data</code>下创建<code>styles.styl</code>。添加以下代码</li>
-</ul>
-<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">// 添加背景图片
-body </span><span class="token punctuation">{</span>
-      <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url(/images/images.jpeg)</span><span class="token punctuation">;</span>//自己喜欢的图片地址
-      <span class="token property">background-size</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
-      <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
-      <span class="token property">background-attachment</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
-      <span class="token property">background-position</span><span class="token punctuation">:</span> <span class="token number">50%</span> <span class="token number">50%</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">//博客内容透明化
-//文章内容的透明度设置
-<span class="token class">.content-wrap</span> </span><span class="token punctuation">{</span>
-  <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0.85</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">//侧边框的透明度设置
-<span class="token class">.sidebar</span> </span><span class="token punctuation">{</span>
-  <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0.85</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">//菜单栏的透明度设置
-<span class="token class">.header-inner</span> </span><span class="token punctuation">{</span>
-  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">255</span>,<span class="token number">255</span>,<span class="token number">255</span>,<span class="token number">0.85</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector">//搜索框（local-search）的透明度设置
-<span class="token class">.popup</span> </span><span class="token punctuation">{</span>
-  <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0.85</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token selector"><span class="token class">.post</span> </span><span class="token punctuation">{</span>
-   <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span>
-   <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span>
-   <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">25</span>px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="设置头像"><a href="#设置头像" class="headerlink" title="设置头像"></a>设置头像</h4><ul>
-<li>在主题配置文件中搜索<code>avatar</code></li>
-</ul>
-<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">avatar</span><span class="token punctuation">:</span>
-  <span class="token key atrule">url</span><span class="token punctuation">:</span> /images/avatar.gif
-  <span class="token key atrule">rounded</span><span class="token punctuation">:</span> <span class="token boolean important">false    </span><span class="token comment" spellcheck="true"># 如果为true，则图片为正方形，头像将显示为圆形。为长方形，头像显示椭圆</span>
-  <span class="token key atrule">rotated</span><span class="token punctuation">:</span> <span class="token boolean important">false    </span><span class="token comment" spellcheck="true"># 如果为true，则头像将随着光标旋转。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="配置评论"><a href="#配置评论" class="headerlink" title="配置评论"></a>配置评论</h4><ol>
-<li>配置Hexo NexT Utteranc <strong>详细内容请查看 <a href="https://github.com/theme-next/hexo-next-utteranc">Hexo NexT Utteranc配置</a></strong></li>
-</ol>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> theme-next/hexo-next-utteranc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="2">
-<li>安装成功后，在主题配置文件中配置，根据<code>username/username.github.io</code>配置repo，其他可按默认配置</li>
-</ol>
-<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># Demo: https://utteranc.es/ http://trumandu.github.io/about/ </span>
-<span class="token key atrule">utteranc</span><span class="token punctuation">:</span> 
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true </span>
-  <span class="token key atrule">repo</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true">#Github repo such as :TrumanDu/comments #根据username/username/github.io配置 </span>
-  <span class="token key atrule">pathname</span><span class="token punctuation">:</span> pathname <span class="token comment" spellcheck="true"># theme: github-light,github-dark,github-dark-orange </span>
-  <span class="token key atrule">theme</span><span class="token punctuation">:</span> github<span class="token punctuation">-</span>light 
-  <span class="token key atrule">cdn</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//utteranc.es/client.js 
-  <span class="token comment" spellcheck="true"># If you want to modify priority, please config in **hexo** </span>
-  <span class="token comment" spellcheck="true">#priority:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ol start="3">
-<li>安装utterances。打开 <a href="https://github.com/apps/utterances">utterances</a>，点击Install，<code>Select repositories</code>选择自己搭建博客的仓库。</li>
-</ol>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghek7f2842j31dg0mu7rg.jpg" alt=""></p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><strong>配置更详细更好看的NexT主题请查看 <a href="https://jrbcode.gitee.io/posts/63c4b34f.html">CodeHeap-快速使用Hexo搭建个人博客-主题美化</a></strong> </p>
+                <blockquote>
+<p>简单介绍在项目中基本使用RabbitMQ，从RabbitMQ的接收和发送信息来举例</p>
+</blockquote>
+<h4 id="RabbitMQ的引入"><a href="#RabbitMQ的引入" class="headerlink" title="RabbitMQ的引入"></a>RabbitMQ的引入</h4><p>项目引入<code>spring cloud Bus</code>的依赖，完成项目中服务与RabbitMQ的连接</p>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-starter-bus-amqp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="RabbitMQ的信息发送方"><a href="#RabbitMQ的信息发送方" class="headerlink" title="RabbitMQ的信息发送方"></a>RabbitMQ的信息发送方</h4><p>使用注入的方式使用<code>AmqpTemplate</code></p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@Autowired</span>
+<span class="token keyword">private</span> AmqpTemplate amqpTemplate<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><code>AmqpTemplate</code>含有许多种发送消息的方式。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghzl0l51f4j30u00yh11o.jpg" alt=""></p>
+<p>上边图中的方法为发送RabbitMQ的方式提供了多样化。我这边介绍最简单的方式</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+    * @Description: 发送MQ消息
+    * "myQueue" -> 消息发送的目标
+    * "message" -> 消息
+    */</span>
+amqpTemplate<span class="token punctuation">.</span><span class="token function">convertAndSend</span><span class="token punctuation">(</span><span class="token string">"myQueue"</span><span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="RabbitMQ的信息接收方"><a href="#RabbitMQ的信息接收方" class="headerlink" title="RabbitMQ的信息接收方"></a>RabbitMQ的信息接收方</h4><p>消息接收的三种方式。代码如下</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 1. 非自动创建Queue，如果启动前没有创建Queue，会抛出 Failed to declare [myQueue]</span>
+<span class="token annotation punctuation">@RabbitListener</span><span class="token punctuation">(</span>queues <span class="token operator">=</span> <span class="token string">"myQueue"</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 2. 自动创建队列Queue</span>
+<span class="token annotation punctuation">@RabbitListener</span><span class="token punctuation">(</span>queuesToDeclare <span class="token operator">=</span> <span class="token annotation punctuation">@Queue</span><span class="token punctuation">(</span><span class="token string">"myQueue"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 3. Exchange和Queue绑定</span>
+<span class="token annotation punctuation">@RabbitListener</span><span class="token punctuation">(</span>bindings <span class="token operator">=</span> <span class="token annotation punctuation">@QueueBinding</span><span class="token punctuation">(</span>
+            value <span class="token operator">=</span> <span class="token annotation punctuation">@Queue</span><span class="token punctuation">(</span><span class="token string">"myQueue"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            exchange <span class="token operator">=</span> <span class="token annotation punctuation">@Exchange</span><span class="token punctuation">(</span><span class="token string">"myExchange"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>接收RabbitMQ的消息在SpringBoot项目中使用的是<code>@RabbitListener</code>。这块的配置同样也是需要自己配置的</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghzl965igdj30d80jq0v4.jpg" alt=""></p>
+<p>想要了解<code>@RabbitListener</code>注解中各个方法的定义请看<a href="https://docs.spring.io/spring-amqp/docs/current/api/org/springframework/amqp/rabbit/annotation/RabbitListener.html#bindings--">RabbitListener</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -645,12 +586,8 @@ body </span><span class="token punctuation">{</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Mac/">
-                                    <span class="chip bg-color">Mac</span>
-                                </a>
-                            
-                                <a href="/tags/NexT/">
-                                    <span class="chip bg-color">NexT</span>
+                                <a href="/tags/RabbitMQ/">
+                                    <span class="chip bg-color">RabbitMQ</span>
                                 </a>
                             
                         </div>
@@ -817,7 +754,7 @@ body </span><span class="token punctuation">{</span>
         repo: 'lsqi.github.io',
         owner: 'lsqi',
         admin: '["lsqi"]',
-        id: 'posts/63598.html',
+        id: 'posts/11424.html',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -844,37 +781,37 @@ body </span><span class="token punctuation">{</span>
                 <div class="article-badge left-badge text-color">
                     <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
                 <div class="card">
-                    <a href="/posts/59524.html">
+                    <a href="/posts/11593.html">
                         <div class="card-image">
                             
-                                <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkd7pc4qrj308b04owej.jpg" class="responsive-img" alt="mac下安装maven">
+                                
+                                <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="项目打包成镜像">
                             
-                            <span class="card-title">mac下安装maven</span>
+                            <span class="card-title">项目打包成镜像</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
                                 
-在终端使用mvn -v显示zsh: command not found: mvn
+项目打包成镜像并推送至阿里云的镜像仓库
 
-在maven官网下载maven压缩包
-
-下载并解压到/usr/local文件夹下。检查maven的目录是否和下图一致
-
-注：如果maven文件不存在bin
+项目打包成jar包
+$ mvn clean package -Dmaven.test.skip=true
+打包成功之后，首先还有比较重要的一步，编写Dockerfile
+## 运行在openjdk
                             
                         </div>
                         <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-08
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-28
                         </span>
                             <span class="publish-author">
                                 
                                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                                     
-                                        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    学习笔记
+                                        <a href="/categories/%E5%AE%B9%E5%99%A8/" class="post-category">
+                                    容器
                                 </a>
                                     
                                 
@@ -884,16 +821,8 @@ body </span><span class="token punctuation">{</span>
                     
                         <div class="card-action article-tags">
                             
-                                <a href="/tags/Mac/">
-                                    <span class="chip bg-color">Mac</span>
-                                </a>
-                            
-                                <a href="/tags/maven/">
-                                    <span class="chip bg-color">maven</span>
-                                </a>
-                            
-                                <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
-                                    <span class="chip bg-color">环境变量</span>
+                                <a href="/tags/docker/">
+                                    <span class="chip bg-color">docker</span>
                                 </a>
                             
                         </div>
@@ -907,34 +836,33 @@ body </span><span class="token punctuation">{</span>
                     下一篇&nbsp;<i class="fa fa-chevron-right"></i>
                 </div>
                 <div class="card">
-                    <a href="/posts/42500.html">
+                    <a href="/posts/44354.html">
                         <div class="card-image">
                             
                                 
-                                <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Github+Hexo搭建个人博客">
+                                <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Spring Cloud Bus 配置文件实现自动更新">
                             
-                            <span class="card-title">Github+Hexo搭建个人博客</span>
+                            <span class="card-title">Spring Cloud Bus 配置文件实现自动更新</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
                                 
-前言：最近自己用markdown写了一些博客，想着把自己写的东西也放在Github上。然后……自己的博客搭建了三天才完成。这过程也是蛮丰富的，一步一个脚印，一步一个坑啊。我把自己遇到的比较烦人的问题记下来，方便自己也方便大家 
-
-搭建环境
+上篇文章中描述了使用git仓库保存项目的配置文件，其他项目通过关联配置中心，实现统一配置中心。
+在生产环境中，很少通过重启项目来改变项目的配置文件的。本篇将对Spring Cloud Bus如何实现保证项目运行的过程下，改变远程git仓库
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-02
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-18
                             </span>
                             <span class="publish-author">
                                 
                                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                                     
-                                        <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
-                                    博客搭建
+                                        <a href="/categories/Spring-Cloud/" class="post-category">
+                                    Spring Cloud
                                 </a>
                                     
                                 
@@ -944,12 +872,8 @@ body </span><span class="token punctuation">{</span>
                     
                         <div class="card-action article-tags">
                             
-                                <a href="/tags/Mac/">
-                                    <span class="chip bg-color">Mac</span>
-                                </a>
-                            
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/Spring-Cloud-Bus/">
+                                    <span class="chip bg-color">Spring Cloud Bus</span>
                                 </a>
                             
                         </div>
