@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/contact/index.html</loc>
+    <loc>https://lsqi.github.io/friends/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/friends/index.html</loc>
+    <loc>https://lsqi.github.io/contact/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
@@ -172,6 +172,13 @@
   </url>
   
   <url>
+    <loc>https://lsqi.github.io/tags/http%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2020-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lsqi.github.io/tags/NexT/</loc>
     <lastmod>2020-08-31</lastmod>
     <changefreq>daily</changefreq>
@@ -179,7 +186,7 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/http%E5%8D%8F%E8%AE%AE/</loc>
+    <loc>https://lsqi.github.io/tags/Hexo/</loc>
     <lastmod>2020-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -193,7 +200,35 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/Hexo/</loc>
+    <loc>https://lsqi.github.io/tags/Spring-Cloud-Bus/</loc>
+    <lastmod>2020-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsqi.github.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/</loc>
+    <lastmod>2020-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsqi.github.io/tags/%E6%8E%A5%E5%8F%A3/</loc>
+    <lastmod>2020-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsqi.github.io/tags/docker/</loc>
+    <lastmod>2020-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsqi.github.io/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/</loc>
     <lastmod>2020-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -214,14 +249,7 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/tags/Spring-Cloud-Bus/</loc>
-    <lastmod>2020-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lsqi.github.io/tags/docker/</loc>
+    <loc>https://lsqi.github.io/tags/RabbitMQ/</loc>
     <lastmod>2020-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -236,34 +264,6 @@
   
   <url>
     <loc>https://lsqi.github.io/tags/linux/</loc>
-    <lastmod>2020-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lsqi.github.io/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/</loc>
-    <lastmod>2020-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lsqi.github.io/tags/RabbitMQ/</loc>
-    <lastmod>2020-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lsqi.github.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/</loc>
-    <lastmod>2020-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lsqi.github.io/tags/%E6%8E%A5%E5%8F%A3/</loc>
     <lastmod>2020-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -293,14 +293,14 @@
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/categories/%E5%AE%B9%E5%99%A8/</loc>
+    <loc>https://lsqi.github.io/categories/Java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2020-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lsqi.github.io/categories/Java%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://lsqi.github.io/categories/%E5%AE%B9%E5%99%A8/</loc>
     <lastmod>2020-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
