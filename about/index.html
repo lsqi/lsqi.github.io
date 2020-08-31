@@ -637,7 +637,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"学习笔记","value":5},{"name":"博客搭建","value":2},{"name":"Spring Cloud","value":3},{"name":"Java基础","value":1},{"name":"容器","value":1}],
+                data: [{"name":"博客搭建","value":2},{"name":"学习笔记","value":5},{"name":"Spring Cloud","value":3},{"name":"Java基础","value":1},{"name":"容器","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -661,7 +661,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Mac","maven","环境变量","http协议","NexT","Hexo","Spring Cloud Config","Spring Cloud Bus","抽象类","接口"]
+                data: ["Mac","Hexo","http协议","NexT","maven","环境变量","homebrew","openResty","Spring Cloud Config","Spring Cloud Bus"]
             }
         ],
         yAxis: [
@@ -791,20 +791,14 @@
             <div class="tag-chips center-align">
                 
                     
-                        <a href="/tags/maven/">
-                            <span class="chip center-align waves-effect waves-light chip-default">maven</span>
-                        </a>
-                    
-                
-                    
                         <a href="/tags/Mac/">
                             <span class="chip center-align waves-effect waves-light chip-default">Mac</span>
                         </a>
                     
                 
                     
-                        <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
-                            <span class="chip center-align waves-effect waves-light chip-default">环境变量</span>
+                        <a href="/tags/Hexo/">
+                            <span class="chip center-align waves-effect waves-light chip-default">Hexo</span>
                         </a>
                     
                 
@@ -821,8 +815,26 @@
                     
                 
                     
-                        <a href="/tags/Hexo/">
-                            <span class="chip center-align waves-effect waves-light chip-default">Hexo</span>
+                        <a href="/tags/maven/">
+                            <span class="chip center-align waves-effect waves-light chip-default">maven</span>
+                        </a>
+                    
+                
+                    
+                        <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
+                            <span class="chip center-align waves-effect waves-light chip-default">环境变量</span>
+                        </a>
+                    
+                
+                    
+                        <a href="/tags/homebrew/">
+                            <span class="chip center-align waves-effect waves-light chip-default">homebrew</span>
+                        </a>
+                    
+                
+                    
+                        <a href="/tags/openResty/">
+                            <span class="chip center-align waves-effect waves-light chip-default">openResty</span>
                         </a>
                     
                 
@@ -851,26 +863,14 @@
                     
                 
                     
-                        <a href="/tags/docker/">
-                            <span class="chip center-align waves-effect waves-light chip-default">docker</span>
-                        </a>
-                    
-                
-                    
                         <a href="/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/">
                             <span class="chip center-align waves-effect waves-light chip-default">项目重构</span>
                         </a>
                     
                 
                     
-                        <a href="/tags/homebrew/">
-                            <span class="chip center-align waves-effect waves-light chip-default">homebrew</span>
-                        </a>
-                    
-                
-                    
-                        <a href="/tags/openResty/">
-                            <span class="chip center-align waves-effect waves-light chip-default">openResty</span>
+                        <a href="/tags/docker/">
+                            <span class="chip center-align waves-effect waves-light chip-default">docker</span>
                         </a>
                     
                 
@@ -1115,7 +1115,7 @@
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1598884458004')
+  navigator.serviceWorker.register('/sw.js?t=1598885329053')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

@@ -5,9 +5,9 @@
   <subtitle>[object Object]</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://lsqi.github.io/"/>
-  <updated>2020-08-31T14:28:29.819Z</updated>
-  <id>https://lsqi.github.io/</id>
+  <link href="http://lishengqi.gitee.io/"/>
+  <updated>2020-08-31T14:37:17.459Z</updated>
+  <id>http://lishengqi.gitee.io/</id>
   
   <author>
     <name>小黑</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>项目打包成镜像</title>
-    <link href="https://lsqi.github.io/posts/11593.html"/>
-    <id>https://lsqi.github.io/posts/11593.html</id>
+    <link href="http://lishengqi.gitee.io/posts/11593.html"/>
+    <id>http://lishengqi.gitee.io/posts/11593.html</id>
     <published>2020-08-28T02:29:54.000Z</published>
-    <updated>2020-08-31T14:28:29.819Z</updated>
+    <updated>2020-08-31T14:37:17.459Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>项目打包成镜像并推送至阿里云的镜像仓库</p></blockquote><p>项目打包成jar包</p><pre class="line-numbers language-bash"><code class="language-bash">$ mvn clean package -Dmaven.test.skip<span class="token operator">=</span>true<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>打包成功之后，首先还有比较重要的一步，编写<code>Dockerfile</code></p><pre class="line-numbers language-dockerfile"><code class="language-dockerfile">## 运行在openjdk的环境下FROM openjdk:oraclelinux8## 指定哪个文件放到docker容器中。并命名为app.jarADD target/eureka-0.0.1-SNAPSHOT.jar app.jar## 声明镜像启动的端口EXPOSE 8761##运行项目。使用java命令运行项目CMD ["java", "-jar", "/app.jar"]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p> <a href="https://juejin.im/post/6844903966707286023">详细的Dockerfile编写指令</a></p><p>使用<code>docker build</code>命令生成docker镜像。注：该命令执行在包含<code>Dockerfile</code>的目录下。也就是项目目录下</p><pre class="line-numbers language-bash"><code class="language-bash">$ docker build -t <span class="token punctuation">[</span>REPOSITORY<span class="token punctuation">]</span> <span class="token keyword">.</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>使用以下命令查看镜像信息。如<code>REPOSITORY</code>,<code>IMAGE ID</code>等</p><pre class="line-numbers language-bash"><code class="language-bash">$ docker images<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>使用<code>docker tag</code>为镜像创建一个新的标签</p><pre class="line-numbers language-bash"><code class="language-bash">$ docker tag <span class="token punctuation">[</span>IMAGE ID<span class="token punctuation">]</span> <span class="token punctuation">[</span>NAME<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>push到阿里云镜像仓库。</p><p><a href="https://cr.console.aliyun.com/cn-hangzhou/instances/repositories">查看镜像仓库地址</a> </p><pre class="line-numbers language-bash"><code class="language-bash">$ docker push <span class="token punctuation">[</span>镜像仓库地址<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>镜像仓库地址：<code>点击镜像仓库</code> -&gt; <code>公网地址</code> </p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -39,17 +39,17 @@
     </summary>
     
     
-      <category term="容器" scheme="https://lsqi.github.io/categories/%E5%AE%B9%E5%99%A8/"/>
+      <category term="容器" scheme="http://lishengqi.gitee.io/categories/%E5%AE%B9%E5%99%A8/"/>
     
     
-      <category term="docker" scheme="https://lsqi.github.io/tags/docker/"/>
+      <category term="docker" scheme="http://lishengqi.gitee.io/tags/docker/"/>
     
   </entry>
   
   <entry>
     <title>项目中RabbitMQ的基本使用</title>
-    <link href="https://lsqi.github.io/posts/11424.html"/>
-    <id>https://lsqi.github.io/posts/11424.html</id>
+    <link href="http://lishengqi.gitee.io/posts/11424.html"/>
+    <id>http://lishengqi.gitee.io/posts/11424.html</id>
     <published>2020-08-22T06:17:16.000Z</published>
     <updated>2020-08-31T14:27:30.671Z</updated>
     
@@ -68,17 +68,17 @@
     </summary>
     
     
-      <category term="Spring Cloud" scheme="https://lsqi.github.io/categories/Spring-Cloud/"/>
+      <category term="Spring Cloud" scheme="http://lishengqi.gitee.io/categories/Spring-Cloud/"/>
     
     
-      <category term="RabbitMQ" scheme="https://lsqi.github.io/tags/RabbitMQ/"/>
+      <category term="RabbitMQ" scheme="http://lishengqi.gitee.io/tags/RabbitMQ/"/>
     
   </entry>
   
   <entry>
     <title>Spring Cloud Bus 配置文件实现自动更新</title>
-    <link href="https://lsqi.github.io/posts/44354.html"/>
-    <id>https://lsqi.github.io/posts/44354.html</id>
+    <link href="http://lishengqi.gitee.io/posts/44354.html"/>
+    <id>http://lishengqi.gitee.io/posts/44354.html</id>
     <published>2020-08-18T14:08:39.000Z</published>
     <updated>2020-08-19T13:12:24.018Z</updated>
     
@@ -96,17 +96,17 @@
     </summary>
     
     
-      <category term="Spring Cloud" scheme="https://lsqi.github.io/categories/Spring-Cloud/"/>
+      <category term="Spring Cloud" scheme="http://lishengqi.gitee.io/categories/Spring-Cloud/"/>
     
     
-      <category term="Spring Cloud Bus" scheme="https://lsqi.github.io/tags/Spring-Cloud-Bus/"/>
+      <category term="Spring Cloud Bus" scheme="http://lishengqi.gitee.io/tags/Spring-Cloud-Bus/"/>
     
   </entry>
   
   <entry>
     <title>spring cloud config</title>
-    <link href="https://lsqi.github.io/posts/32221.html"/>
-    <id>https://lsqi.github.io/posts/32221.html</id>
+    <link href="http://lishengqi.gitee.io/posts/32221.html"/>
+    <id>http://lishengqi.gitee.io/posts/32221.html</id>
     <published>2020-08-18T03:36:01.000Z</published>
     <updated>2020-08-19T13:12:41.006Z</updated>
     
@@ -126,17 +126,17 @@
     </summary>
     
     
-      <category term="Spring Cloud" scheme="https://lsqi.github.io/categories/Spring-Cloud/"/>
+      <category term="Spring Cloud" scheme="http://lishengqi.gitee.io/categories/Spring-Cloud/"/>
     
     
-      <category term="Spring Cloud Config" scheme="https://lsqi.github.io/tags/Spring-Cloud-Config/"/>
+      <category term="Spring Cloud Config" scheme="http://lishengqi.gitee.io/tags/Spring-Cloud-Config/"/>
     
   </entry>
   
   <entry>
     <title>重构SpringBoot项目</title>
-    <link href="https://lsqi.github.io/posts/46268.html"/>
-    <id>https://lsqi.github.io/posts/46268.html</id>
+    <link href="http://lishengqi.gitee.io/posts/46268.html"/>
+    <id>http://lishengqi.gitee.io/posts/46268.html</id>
     <published>2020-08-16T16:01:38.000Z</published>
     <updated>2020-08-17T15:07:40.782Z</updated>
     
@@ -154,17 +154,17 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="项目重构" scheme="https://lsqi.github.io/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/"/>
+      <category term="项目重构" scheme="http://lishengqi.gitee.io/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>抽象类和接口</title>
-    <link href="https://lsqi.github.io/posts/45299.html"/>
-    <id>https://lsqi.github.io/posts/45299.html</id>
+    <link href="http://lishengqi.gitee.io/posts/45299.html"/>
+    <id>http://lishengqi.gitee.io/posts/45299.html</id>
     <published>2020-08-11T16:39:45.000Z</published>
     <updated>2020-08-31T05:22:59.506Z</updated>
     
@@ -182,19 +182,19 @@
     </summary>
     
     
-      <category term="Java基础" scheme="https://lsqi.github.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java基础" scheme="http://lishengqi.gitee.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="抽象类" scheme="https://lsqi.github.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
+      <category term="抽象类" scheme="http://lishengqi.gitee.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
     
-      <category term="接口" scheme="https://lsqi.github.io/tags/%E6%8E%A5%E5%8F%A3/"/>
+      <category term="接口" scheme="http://lishengqi.gitee.io/tags/%E6%8E%A5%E5%8F%A3/"/>
     
   </entry>
   
   <entry>
     <title>项目打包运行在后台</title>
-    <link href="https://lsqi.github.io/posts/63379.html"/>
-    <id>https://lsqi.github.io/posts/63379.html</id>
+    <link href="http://lishengqi.gitee.io/posts/63379.html"/>
+    <id>http://lishengqi.gitee.io/posts/63379.html</id>
     <published>2020-08-08T08:45:41.000Z</published>
     <updated>2020-08-14T15:41:30.120Z</updated>
     
@@ -213,19 +213,19 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="java" scheme="https://lsqi.github.io/tags/java/"/>
+      <category term="java" scheme="http://lishengqi.gitee.io/tags/java/"/>
     
-      <category term="linux" scheme="https://lsqi.github.io/tags/linux/"/>
+      <category term="linux" scheme="http://lishengqi.gitee.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>http学习</title>
-    <link href="https://lsqi.github.io/posts/64520.html"/>
-    <id>https://lsqi.github.io/posts/64520.html</id>
+    <link href="http://lishengqi.gitee.io/posts/64520.html"/>
+    <id>http://lishengqi.gitee.io/posts/64520.html</id>
     <published>2020-08-08T08:42:08.000Z</published>
     <updated>2020-08-17T15:08:16.554Z</updated>
     
@@ -241,17 +241,17 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="http协议" scheme="https://lsqi.github.io/tags/http%E5%8D%8F%E8%AE%AE/"/>
+      <category term="http协议" scheme="http://lishengqi.gitee.io/tags/http%E5%8D%8F%E8%AE%AE/"/>
     
   </entry>
   
   <entry>
     <title>使用homebrew安装openResty</title>
-    <link href="https://lsqi.github.io/posts/14066.html"/>
-    <id>https://lsqi.github.io/posts/14066.html</id>
+    <link href="http://lishengqi.gitee.io/posts/14066.html"/>
+    <id>http://lishengqi.gitee.io/posts/14066.html</id>
     <published>2020-08-08T08:41:58.000Z</published>
     <updated>2020-08-18T03:05:11.288Z</updated>
     
@@ -269,19 +269,19 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="homebrew" scheme="https://lsqi.github.io/tags/homebrew/"/>
+      <category term="homebrew" scheme="http://lishengqi.gitee.io/tags/homebrew/"/>
     
-      <category term="openResty" scheme="https://lsqi.github.io/tags/openResty/"/>
+      <category term="openResty" scheme="http://lishengqi.gitee.io/tags/openResty/"/>
     
   </entry>
   
   <entry>
     <title>mac下安装maven</title>
-    <link href="https://lsqi.github.io/posts/59524.html"/>
-    <id>https://lsqi.github.io/posts/59524.html</id>
+    <link href="http://lishengqi.gitee.io/posts/59524.html"/>
+    <id>http://lishengqi.gitee.io/posts/59524.html</id>
     <published>2020-08-08T08:41:36.000Z</published>
     <updated>2020-08-14T15:42:03.754Z</updated>
     
@@ -300,21 +300,21 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://lsqi.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="maven" scheme="https://lsqi.github.io/tags/maven/"/>
+      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
     
-      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
+      <category term="maven" scheme="http://lishengqi.gitee.io/tags/maven/"/>
     
-      <category term="环境变量" scheme="https://lsqi.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+      <category term="环境变量" scheme="http://lishengqi.gitee.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     
   </entry>
   
   <entry>
     <title>Mac下配置NexT主题</title>
-    <link href="https://lsqi.github.io/posts/63598.html"/>
-    <id>https://lsqi.github.io/posts/63598.html</id>
+    <link href="http://lishengqi.gitee.io/posts/63598.html"/>
+    <id>http://lishengqi.gitee.io/posts/63598.html</id>
     <published>2020-08-02T15:03:39.000Z</published>
     <updated>2020-08-19T13:12:14.069Z</updated>
     
@@ -332,19 +332,19 @@
     </summary>
     
     
-      <category term="博客搭建" scheme="https://lsqi.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="http://lishengqi.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
     
-      <category term="NexT" scheme="https://lsqi.github.io/tags/NexT/"/>
+      <category term="NexT" scheme="http://lishengqi.gitee.io/tags/NexT/"/>
     
   </entry>
   
   <entry>
     <title>Github+Hexo搭建个人博客</title>
-    <link href="https://lsqi.github.io/posts/42500.html"/>
-    <id>https://lsqi.github.io/posts/42500.html</id>
+    <link href="http://lishengqi.gitee.io/posts/42500.html"/>
+    <id>http://lishengqi.gitee.io/posts/42500.html</id>
     <published>2020-08-02T06:08:09.861Z</published>
     <updated>2020-08-18T03:06:33.442Z</updated>
     
@@ -361,12 +361,12 @@
     </summary>
     
     
-      <category term="博客搭建" scheme="https://lsqi.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="http://lishengqi.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Mac" scheme="https://lsqi.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://lishengqi.gitee.io/tags/Mac/"/>
     
-      <category term="Hexo" scheme="https://lsqi.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://lishengqi.gitee.io/tags/Hexo/"/>
     
   </entry>
   
