@@ -585,7 +585,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08"]
+            data: ["2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09"]
         },
         yAxis: {
             type: 'value',
@@ -595,7 +595,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,12],
+                data: [0,0,0,0,0,0,0,0,0,0,0,12,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a', '#3ecf8e', '#82d3f4'],
@@ -637,7 +637,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"博客搭建","value":2},{"name":"学习笔记","value":5},{"name":"Spring Cloud","value":3},{"name":"Java基础","value":1},{"name":"容器","value":1}],
+                data: [{"name":"学习笔记","value":5},{"name":"博客搭建","value":2},{"name":"Spring Cloud","value":3},{"name":"Java基础","value":1},{"name":"容器","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -661,7 +661,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Mac","Hexo","http协议","NexT","maven","环境变量","homebrew","openResty","Spring Cloud Config","Spring Cloud Bus"]
+                data: ["Mac","maven","环境变量","NexT","http协议","Spring Cloud Config","Hexo","Spring Cloud Bus","项目重构","抽象类"]
             }
         ],
         yAxis: [
@@ -791,32 +791,14 @@
             <div class="tag-chips center-align">
                 
                     
-                        <a href="/tags/Mac/">
-                            <span class="chip center-align waves-effect waves-light chip-default">Mac</span>
-                        </a>
-                    
-                
-                    
-                        <a href="/tags/Hexo/">
-                            <span class="chip center-align waves-effect waves-light chip-default">Hexo</span>
-                        </a>
-                    
-                
-                    
-                        <a href="/tags/http%E5%8D%8F%E8%AE%AE/">
-                            <span class="chip center-align waves-effect waves-light chip-default">http协议</span>
-                        </a>
-                    
-                
-                    
-                        <a href="/tags/NexT/">
-                            <span class="chip center-align waves-effect waves-light chip-default">NexT</span>
-                        </a>
-                    
-                
-                    
                         <a href="/tags/maven/">
                             <span class="chip center-align waves-effect waves-light chip-default">maven</span>
+                        </a>
+                    
+                
+                    
+                        <a href="/tags/Mac/">
+                            <span class="chip center-align waves-effect waves-light chip-default">Mac</span>
                         </a>
                     
                 
@@ -827,14 +809,14 @@
                     
                 
                     
-                        <a href="/tags/homebrew/">
-                            <span class="chip center-align waves-effect waves-light chip-default">homebrew</span>
+                        <a href="/tags/NexT/">
+                            <span class="chip center-align waves-effect waves-light chip-default">NexT</span>
                         </a>
                     
                 
                     
-                        <a href="/tags/openResty/">
-                            <span class="chip center-align waves-effect waves-light chip-default">openResty</span>
+                        <a href="/tags/http%E5%8D%8F%E8%AE%AE/">
+                            <span class="chip center-align waves-effect waves-light chip-default">http协议</span>
                         </a>
                     
                 
@@ -845,8 +827,20 @@
                     
                 
                     
+                        <a href="/tags/Hexo/">
+                            <span class="chip center-align waves-effect waves-light chip-default">Hexo</span>
+                        </a>
+                    
+                
+                    
                         <a href="/tags/Spring-Cloud-Bus/">
                             <span class="chip center-align waves-effect waves-light chip-default">Spring Cloud Bus</span>
+                        </a>
+                    
+                
+                    
+                        <a href="/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/">
+                            <span class="chip center-align waves-effect waves-light chip-default">项目重构</span>
                         </a>
                     
                 
@@ -863,20 +857,14 @@
                     
                 
                     
-                        <a href="/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/">
-                            <span class="chip center-align waves-effect waves-light chip-default">项目重构</span>
+                        <a href="/tags/homebrew/">
+                            <span class="chip center-align waves-effect waves-light chip-default">homebrew</span>
                         </a>
                     
                 
                     
-                        <a href="/tags/docker/">
-                            <span class="chip center-align waves-effect waves-light chip-default">docker</span>
-                        </a>
-                    
-                
-                    
-                        <a href="/tags/RabbitMQ/">
-                            <span class="chip center-align waves-effect waves-light chip-default">RabbitMQ</span>
+                        <a href="/tags/openResty/">
+                            <span class="chip center-align waves-effect waves-light chip-default">openResty</span>
                         </a>
                     
                 
@@ -889,6 +877,18 @@
                     
                         <a href="/tags/linux/">
                             <span class="chip center-align waves-effect waves-light chip-default">linux</span>
+                        </a>
+                    
+                
+                    
+                        <a href="/tags/RabbitMQ/">
+                            <span class="chip center-align waves-effect waves-light chip-default">RabbitMQ</span>
+                        </a>
+                    
+                
+                    
+                        <a href="/tags/docker/">
+                            <span class="chip center-align waves-effect waves-light chip-default">docker</span>
                         </a>
                     
                 
@@ -1115,7 +1115,7 @@
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1598885356520')
+  navigator.serviceWorker.register('/sw.js?t=1599024133351')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
