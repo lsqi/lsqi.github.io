@@ -542,8 +542,6 @@ unartOperator<span class="token punctuation">.</span><span class="token function
 <p>@FunctionalInterface</p>
 <p>public interface <strong>BiFunction</strong></p>
 <p>表示接受两个参数并产生结果的函数。这是<code>Function</code>的二元专业化 。</p>
-</blockquote>
-<blockquote>
 <p>这是一个functional interface的功能方法是<code>apply(Object, Object)</code> 。</p>
 </blockquote>
 <p>T -&gt; 函数接收第一个参数的类型</p>
@@ -592,8 +590,6 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <p>public interface <strong>Supplier</strong></p>
 <p>代表结果供应商。</p>
 <p>没有要求每次调用供应商时都会返回新的或不同的结果。</p>
-</blockquote>
-<blockquote>
 <p>这是一个functional interface的功能方法是<code>get()</code> 。</p>
 </blockquote>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// Teacher{"name":"", "school":"", "subject":""}</span>
@@ -618,8 +614,6 @@ teacherSupplier2<span class="token punctuation">.</span><span class="token funct
 <p>@FunctionalInterface</p>
 <p>public interface Consumer<t></t></p>
 <p>表示接受单个输入参数并且不返回结果的操作。与大多数其他功能界面不同， Consumer预计将通过副作用进行操作。</p>
-</blockquote>
-<blockquote>
 <p>这是一个functional interface的功能方法是accept(Object) 。</p>
 </blockquote>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// TODO 接收T类型</span>
@@ -1344,7 +1338,7 @@ $ mvn clean package -Dmaven.test.skip=true
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1599485062205')
+  navigator.serviceWorker.register('/sw.js?t=1599485282524')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
