@@ -4,15 +4,8 @@
 
 <head><link rel=manifest href=/manifest.json>
     <meta charset="utf-8">
-    <meta name="keywords" content="spring cloud config, 博客 新手搭建博客 Java">
-    <meta name="description" content="
-学习Spring Cloud Config
-
-要学习这部分的知识需要先了解配置中心的工作流程
-
-配置中心服务器端配置中心的依赖
-&amp;lt;dependency&gt;
-  &amp;lt;groupId&gt;org.springframework.cloud">
+    <meta name="keywords" content="java.util.function中的函数式接口, 博客 新手搭建博客 Java">
+    <meta name="description" content="前言：针对与jdk1.8的新特性(流)，java.util.function包下的函数式接口的学习是必不可少的。lambda表达式的入参除了普通的入参，大部分都是以lambda表达式作为方法的入参。如{(a, b) -&amp;gt; a + b}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +14,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="white"/>
-    <title>spring cloud config | lishengqi&#39;Blog</title>
+    <title>java.util.function中的函数式接口 | lishengqi&#39;Blog</title>
     <link rel="apple-touch-icon" href="/null">
     <link rel="icon" type="image/png" href="/medias/jingyu.png">
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -347,12 +340,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">spring cloud config</h1>
+                    <h1 class="description center-align post-title">java.util.function中的函数式接口</h1>
                 </div>
             </div>
         </div>
@@ -467,24 +460,11 @@
                 <div class="col s7">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Spring-Cloud-Config/">
-                                    <span class="chip bg-color">Spring Cloud Config</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                        <div class="post-cate">
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                                <a href="/categories/Spring-Cloud/" class="post-category">
-                                    Spring Cloud
-                                </a>
-                            
-                        </div>
                     
                 </div>
             </div>
@@ -495,21 +475,21 @@
                 
                     <div class="post-date info-break-policy">
                         <i class="fa fa-calendar-check-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                        2020-08-19
+                        2020-09-07
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.1k
+                        1.5k
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        6 分
                     </div>
                 
 
@@ -524,102 +504,187 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>学习Spring Cloud Config</p>
+                <p><strong>前言：针对与jdk1.8的新特性(流)，java.util.function包下的函数式接口的学习是必不可少的。lambda表达式的入参除了普通的入参，大部分都是以lambda表达式作为方法的入参。如{(a, b) -&gt; a + b}。本文通过我对部分函数式接口的理解以及自我测试，总结出部分函数式接口的基本使用方式。</strong></p>
+<p><a href="https://developer.ibm.com/zh/articles/j-lo-java8streamapi/">Java 8 中的 Streams API 详解</a> 新手入门可观看Stream使用详解以及Stream的介绍。</p>
+<h3 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口"></a>函数式接口</h3><h4 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h4><h4 id="jdk1-8介绍"><a href="#jdk1-8介绍" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+<p>@FunctionalInterface</p>
+<p>public interface <strong>Function</strong></p>
+<p>表示接受一个参数并产生结果的函数。</p>
+<p>这是一个functional interface的功能方法是<code>apply(Object)</code> 。</p>
 </blockquote>
-<p>要学习这部分的知识需要先了解配置中心的工作流程</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghvcf8cg5fj31jw0u0n6m.jpg" alt=""></p>
-<h4 id="配置中心服务器端"><a href="#配置中心服务器端" class="headerlink" title="配置中心服务器端"></a>配置中心服务器端</h4><p>配置中心的依赖</p>
-<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-config-server<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>配置中心在启动类上边的注解</p>
-<p><code>@EnableConfigServer</code></p>
-<p>在启动类加上注解之后，发现项目启动有问题。</p>
-<pre class="line-numbers language-text"><code class="language-text">If you are using the git profile, you need to set a Git URI in your configuration.  If you are using a native profile and have spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>上述问题是因为，你没有配置远程的git仓库，spring配置中心的工作流程就是：远程仓库 -&gt; 配置中心 -&gt; 本地系统</p>
-<p>配置中心配置文件配置远程git仓库</p>
-<pre class="line-numbers language-yml"><code class="language-yml">spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://gitee.com/XXX/config-repo
-          username: XXX # 账户
-          password: XXX # 密码
-          basedir: /Users/XXX/workspace/microservice/config/basedir # 本地存放配置中心文件的位置<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>访问远程仓库的配置文件的命名规则。例子<a href="http://localhost:8080/config-XXX.yml。XXX为自定义的名字">http://localhost:8080/config-XXX.yml。XXX为自定义的名字</a></p>
-<pre><code>/{name}-{profiles}.yml
-/{label}/{name} -{profiles}. yml</code></pre><p><code>name</code>:  服务器名<br><code>profiles</code>:  环境<br><code>label</code>:   分支(branch)</p>
-<p>注：访问配置仓库的配置信息不仅支持<code>yml</code>，还支持<code>properties</code>,<code>json</code>等配置文件格式</p>
-<h4 id="客户端获取配置中心的配置"><a href="#客户端获取配置中心的配置" class="headerlink" title="客户端获取配置中心的配置"></a>客户端获取配置中心的配置</h4><p>首先就是引入配置中心客户端的依赖啦</p>
-<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-config-client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>我将我的客户端的配置文件信息(数据库账户密码等)放在远程git仓库上边。这时候要怎样才能访问到config配置中心呢。通过<code>service-id</code>访问到config配置中心，获取的文件为<code>项目名</code>-<code>profile</code>.yml -&gt; (order-test.yml)。这样就能获取到仓库上边的<code>order-test.yml</code>文件了</p>
-<pre class="line-numbers language-yml"><code class="language-yml">spring:
-  application:
-    name: order
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: CONFIG
-      profile: test<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这时候启动项目是会出问题的。</p>
-<pre class="line-numbers language-text"><code class="language-text">Description:
+<p>T -&gt; 函数接收参数的类型</p>
+<p>R -&gt; 函数返回结果的类型</p>
+<pre><code>// TODO 接收T类型的参数，返回R类型的结果
+R apply(T t); // Function默认的调用方式
 
-  Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+Function&lt;Object, String&gt; function = (s) -&gt; {
+    return s.toString().UpperCase();
+}
+function.apply("function");
+// 输出结果："FUNCTION"</code></pre><h3 id="UnaryOperator"><a href="#UnaryOperator" class="headerlink" title="UnaryOperator"></a>UnaryOperator</h3><h4 id="jdk1-8介绍-1"><a href="#jdk1-8介绍-1" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+<p>@FunctionalInterface</p>
+<p>public interface <strong>UnaryOperator</strong></p>
+<p>extends Function&lt;T,T&gt;</p>
+<p>表示对单个操作数产生与其操作数相同类型的结果的操作。对于操作数和结果是相同类型的情况，这是Function的<code>Function</code> 。</p>
+<p>这是一个functional interface的功能方法是<code>Function.apply(Object)</code> 。</p>
+</blockquote>
+<pre><code>// TODO 接收T类型的参数，返回T类型的结果
+T apply(T t); // UnaryOperator 默认的调用方式
 
-  Reason: Failed to determine a suitable driver class
+// TODO 接收一个String类型的参数，返回一个String类型的值。既是生产者又是消费者
+UnaryOperator&lt;String&gt; unaryOperator = (s) -&gt; {
+    return s.trim().toUpperCase();
+}
 
-
-  Action:
-
-  Consider the following:
-      If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-      If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>提示</strong>：找不到数据库的配置。需要配置数据库信息。</p>
-<p><strong>疑问</strong>：数据库配置不是放置到配置中心上了吗？而且我们在项目中配置了配置中心，按理说应该能拿到数据库的配置的。为什么拿不到配置呢？</p>
+unartOperator.apply(" test "); // 输出结果："TEST";</code></pre><h3 id="BiFunction"><a href="#BiFunction" class="headerlink" title="BiFunction"></a>BiFunction</h3><h4 id="jdk1-8介绍-2"><a href="#jdk1-8介绍-2" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+<p>@FunctionalInterface</p>
+<p>public interface <strong>BiFunction</strong></p>
+<p>表示接受两个参数并产生结果的函数。这是<code>Function</code>的二元专业化 。</p>
+</blockquote>
 <blockquote>
-<p>首先我们项目启动先加载的是我们的配置文件<code>application.yml</code>文件。而不是先去获取配置中心的信息。</p>
-<p><strong>解决方法</strong>：我们将配置文件的优先级提高，先通过eureka去访问config配置中心，获取到项目的配置文件之后，在执行后边的操作。</p>
-<p><strong>操作</strong>：将<code>application.yml</code>改成<code>bootstrap.yml</code>。修改配置文件的文件名。这时候才能启动我们的项目</p>
+<p>这是一个functional interface的功能方法是<code>apply(Object, Object)</code> 。</p>
 </blockquote>
-<p><strong>注：配置中心在获取文件的时候<code>order-test.yml</code>的时候会默认获取一个<code>order.yml</code>的文件。获取到两个配置文件之后在进行二者的合并</strong></p>
-<pre class="line-numbers language-shell"><code class="language-shell">Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://gitee.com/lishengqi/config-repo/order-test.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://gitee.com/lishengqi/config-repo/order.yml'}]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="Spring-Cloud-Config使用过程中碰到的坑"><a href="#Spring-Cloud-Config使用过程中碰到的坑" class="headerlink" title="Spring Cloud Config使用过程中碰到的坑"></a><code>Spring Cloud Config</code>使用过程中碰到的坑</h4><p><strong>坑1</strong></p>
+<p>T -&gt; 函数接收第一个参数的类型</p>
+<p>U -&gt; 函数接收第二个参数的类型</p>
+<p>R -&gt; 函数返回结果的类型</p>
+<pre><code>// TODO 接收T类型和U类型的参数，返回R类型的结果
+R apply(T t, U u); // BiFunction 默认的调用方式
+
+// TODO 打印输入两个参数的字符长度
+BiFunction&lt;Object, String, Integer&gt; biFunction = (s1, s2) -&gt; {
+    return s1.toString().length() + s2.length();
+};
+Integer result = biFunction.apply("woshi", "xiaohei");
+System.out.println(result); // 输出结果：12</code></pre><h3 id="BinaryOperator"><a href="#BinaryOperator" class="headerlink" title="BinaryOperator"></a>BinaryOperator</h3><h4 id="jdk1-8介绍-3"><a href="#jdk1-8介绍-3" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+<p>@FunctionalInterface</p>
+<p>public interface BinaryOperator<t></t></p>
+<p>extends <strong>BiFunction</strong></p>
+<p><strong>表示对同一类型的两个操作数的操作，产生与操作数相同类型的结果</strong>。对于操作数和结果都是相同类型的情况，这是BiFunction的专业化 。</p>
+<p>这是一个functional interface的功能方法是BiFunction.apply(Object, Object) 。</p>
+</blockquote>
+<pre><code>// TODO 接收两个T类型的参数，返回T类型的结果
+T apply(T t1, T t2); // BinaryOperator 默认的调用方式
+
+// TODO 例子：拼接接收的两个String参数
+BinaryOperator&lt;String&gt; binaryOperator = (s1, s2) -&gt; s1 + s2;
+String result = binaryOperator.apply("a", "b");
+// 输出结果：“ab”；</code></pre><p><strong>从接口的定义来说，BiFunction比Function多了一个入参，也使得BiFunction在一些业务场景上更灵活些。但其实本质上，他们的调用方式都是使用apply()进行调用</strong></p>
+<h3 id="Predicate"><a href="#Predicate" class="headerlink" title="Predicate"></a>Predicate</h3><h4 id="jdk1-8介绍-4"><a href="#jdk1-8介绍-4" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+<p>@FunctionalInterface</p>
+<p>public interface Predicate<t></t></p>
+<p>表示一个参数的谓词（布尔值函数）。</p>
+<p>这是一个functional interface的功能方法是test(Object) 。</p>
+</blockquote>
+<p><strong>简述：Predicate表达式 &lt;==&gt; 逻辑判断语句</strong></p>
+<pre><code>// TODO 接收T类型参数，返回boolean类型的结果
+boolean test(T t); // Predicate 默认的调用方式
+
+// TODO Predicate接收返回boolean类型的逻辑表达式。
+Predicate predicate = pre -&gt; "aa".equals(pre);
+boolean result = predicate2.test("aa");
+System.out.println(result);</code></pre><h3 id="Supplier"><a href="#Supplier" class="headerlink" title="Supplier"></a>Supplier</h3><h4 id="jdk1-8介绍-5"><a href="#jdk1-8介绍-5" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+<p>@FunctionalInterface</p>
+<p>public interface <strong>Supplier</strong></p>
+<p>代表结果供应商。</p>
+<p>没有要求每次调用供应商时都会返回新的或不同的结果。</p>
+</blockquote>
 <blockquote>
-<p>个人虽解决如下问题，但是不明白为何会出现这样的情况。如果哪位大佬了解，能否告知一番</p>
+<p>这是一个functional interface的功能方法是<code>get()</code> 。</p>
 </blockquote>
-<pre class="line-numbers language-yml"><code class="language-yml">spring:
-  cloud:
-    config:
-      discovery:
-        service-id: config
-        enabled: true
-      profile: dev
-  application:
-    name: product<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>按照<code>bootstrap.xml</code>配置文件中的配置，按道理来说是获取<code>config</code>服务下边的<code>product-dev.xml</code>的配置文件。但是却是显示启动错误。</p>
-<pre class="line-numbers language-text"><code class="language-text">
-Description:
+<pre><code>// Teacher{"name":"", "school":"", "subject":""}
+// TODO 使用Supplier函数式接口创建一个默认的Teacher对象。
+// TODO 不接受任何参数，但是返回一个类型的对象。 ==&gt; 生产者
+Supplier&lt;Teacher&gt; teacherSupplier = () -&gt; {
+    Teacher t = new Teacher();
+    t.setName("张三");
+    t.setSchool("某市一中");
+    t.setSubject("语文");
+    return t;
+}
+// 获取一个默认的Teacher对象。
+// 默认信息为Teacher{"name":"张三", "school":"某市一中", "subject":"语文"}
+teacherSupplier.get();
 
-Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+// 使用Teacher::new创建Supplier&lt;Teacher&gt;对象。
+Supplier&lt;Teacher&gt; teacherSupplier2 = Teacher::new;
+// teacherSupplier2.get() 获取到的Teacher对象默认信息为null
+teacherSupplier2.get();</code></pre><h3 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h3><h4 id="jdk1-8介绍-6"><a href="#jdk1-8介绍-6" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+<p>@FunctionalInterface</p>
+<p>public interface Consumer<t></t></p>
+<p>表示接受单个输入参数并且不返回结果的操作。与大多数其他功能界面不同， Consumer预计将通过副作用进行操作。</p>
+</blockquote>
+<blockquote>
+<p>这是一个functional interface的功能方法是accept(Object) 。</p>
+</blockquote>
+<pre><code>// TODO 接收T类型
+void accept(T t); // Consumer 默认的调用方式
 
-Reason: Failed to determine a suitable driver class
-
-
-Action:
-
-Consider the following:
-    If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-    If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>我仔细查看日志中的信息。<code>ConfigServicePropertySourceLocator</code>加载的是远程git仓库上边的<code>product-test.xml文件</code>。但是我的远程git仓库中的配置文件不叫这个名字，我将名字改掉后就能完好的启动项目了。</p>
-<pre class="line-numbers language-text"><code class="language-text">ConfigServicePropertySourceLocator : Located environment: name=product, profiles=[test], label=null, version=e2f64f3e6dac18ce0741c3f8a1088dc17ad5706f, state=null<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+// TODO Consumer ：该函数式接口接收一个参数，但不返回任何类型的值。==&gt;消费者
+Consumer&lt;String&gt; consumer = (s) -&gt; {
+    System.out.println(s.trim().toUpperCase());
+}
+consumer.accept("  consumer   ");
+// 输出结果："CONSUMER"</code></pre><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="函数式接口总结"><a href="#函数式接口总结" class="headerlink" title="函数式接口总结"></a>函数式接口总结</h3><table>
+<thead>
+<tr>
+<th>接口</th>
+<th>参数</th>
+<th>返回类型</th>
+<th>调用方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Predicate<t></t></td>
+<td>T</td>
+<td>boolean</td>
+<td>test(T t)</td>
+<td>默认接收返回boolean参数类型的值</td>
+</tr>
+<tr>
+<td>BinaryOperator<t></t></td>
+<td>T</td>
+<td>T</td>
+<td>apply(T t1, T t2)</td>
+<td>extends BiFunction&lt;T, T, T&gt;。接收两个T类型的参数，返回T类型的数据</td>
+</tr>
+<tr>
+<td>Supplier<t></t></td>
+<td>none</td>
+<td>T</td>
+<td>get();</td>
+<td>生产者。不接受任何参数，但是返回T类型的参数</td>
+</tr>
+<tr>
+<td>Consumer<t></t></td>
+<td>T</td>
+<td>none</td>
+<td>accept(T t);</td>
+<td>消费者。接收T类型的参数，但是不返回任何数据</td>
+</tr>
+<tr>
+<td>UnaryOperator<t></t></td>
+<td>T</td>
+<td>T</td>
+<td>apply(T t);</td>
+<td>extends Function&lt;T, T&gt;。接收T类型的参数，返回T类型的数据</td>
+</tr>
+<tr>
+<td>Function&lt;T, R&gt;</td>
+<td>T</td>
+<td>R</td>
+<td>apply(T t);</td>
+<td>接收T类型的参数，返回R类型的数据</td>
+</tr>
+<tr>
+<td>BiFunction&lt;T, U, R&gt;</td>
+<td>T, U</td>
+<td>R</td>
+<td>apply(T t, U u)</td>
+<td>接收T类型和U类型的两个参数，返回R类型的结果</td>
+</tr>
+</tbody></table>
+<p><strong>总结：通过对上述的函数式接口的定义和调用方式，来达到对函数式接口的认识，也希望这篇文档能帮助读者了解lambda表达式和函数式接口。理解有误的地方麻烦指正，谢谢。</strong></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -650,11 +715,7 @@ Consider the following:
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Spring-Cloud-Config/">
-                                    <span class="chip bg-color">Spring Cloud Config</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -819,7 +880,7 @@ Consider the following:
         repo: 'lsqi.github.io',
         owner: 'lsqi',
         admin: '["lsqi"]',
-        id: 'posts/32221.html',
+        id: 'posts/44837.html',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -842,51 +903,39 @@ Consider the following:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-            <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
                 <div class="article-badge left-badge text-color">
-                    <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                    <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+                </div>
                 <div class="card">
-                    <a href="/posts/44354.html">
+                    <a href="/posts/44837.html">
                         <div class="card-image">
                             
                                 
-                                <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Spring Cloud Bus 配置文件实现自动更新">
+                                <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="java.util.function中的函数式接口">
                             
-                            <span class="card-title">Spring Cloud Bus 配置文件实现自动更新</span>
+                            <span class="card-title">java.util.function中的函数式接口</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                
-上篇文章中描述了使用git仓库保存项目的配置文件，其他项目通过关联配置中心，实现统一配置中心。
-在生产环境中，很少通过重启项目来改变项目的配置文件的。本篇将对Spring Cloud Bus如何实现保证项目运行的过程下，改变远程git仓库
+                                前言：针对与jdk1.8的新特性(流)，java.util.function包下的函数式接口的学习是必不可少的。lambda表达式的入参除了普通的入参，大部分都是以lambda表达式作为方法的入参。如{(a, b) -&gt; a + b}
                             
                         </div>
                         <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-07
+                            </span>
                             <span class="publish-author">
                                 
-                                    <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                    
-                                        <a href="/categories/Spring-Cloud/" class="post-category">
-                                    Spring Cloud
-                                </a>
-                                    
+                                    <i class="fa fa-user fa-fw"></i>
+                                    小黑
                                 
                             </span>
                         </div>
                     </div>
-                    
-                        <div class="card-action article-tags">
-                            
-                                <a href="/tags/Spring-Cloud-Bus/">
-                                    <span class="chip bg-color">Spring Cloud Bus</span>
-                                </a>
-                            
-                        </div>
+
                     
                 </div>
             </div>
@@ -897,33 +946,37 @@ Consider the following:
                     下一篇&nbsp;<i class="fa fa-chevron-right"></i>
                 </div>
                 <div class="card">
-                    <a href="/posts/46268.html">
+                    <a href="/posts/11593.html">
                         <div class="card-image">
                             
                                 
-                                <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="重构SpringBoot项目">
+                                <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="项目打包成镜像">
                             
-                            <span class="card-title">重构SpringBoot项目</span>
+                            <span class="card-title">项目打包成镜像</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
                                 
-最近在学习微服务的过程中，需要将之前学到的SpringBoot项目重构。
-个人在学习过程中参考 慕课网小马哥的 Spring Boot 2.0深度实践-初遇Spring Boot 这门课程是免费的。如果博客阐述不当，可以去看看小马哥的视频
+项目打包成镜像并推送至阿里云的镜像仓库
+
+项目打包成jar包
+$ mvn clean package -Dmaven.test.skip=true
+打包成功之后，首先还有比较重要的一步，编写Dockerfile
+## 运行在openjdk
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-17
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-28
                             </span>
                             <span class="publish-author">
                                 
                                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                                     
-                                        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    学习笔记
+                                        <a href="/categories/%E5%AE%B9%E5%99%A8/" class="post-category">
+                                    容器
                                 </a>
                                     
                                 
@@ -933,8 +986,8 @@ Consider the following:
                     
                         <div class="card-action article-tags">
                             
-                                <a href="/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/">
-                                    <span class="chip bg-color">项目重构</span>
+                                <a href="/tags/docker/">
+                                    <span class="chip bg-color">docker</span>
                                 </a>
                             
                         </div>

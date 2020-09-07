@@ -417,7 +417,7 @@
 
     <script>
         // 每天切换 banner 图.  Switch banner image every day.
-        $('.bg-cover').css('background-image', 'url(/medias/banner/3.jpg)');
+        $('.bg-cover').css('background-image', 'url(/medias/banner/1.jpg)');
     </script>
 
 
@@ -557,6 +557,39 @@
                             
 
 
+    
+
+    
+        <div class="title"><i class="fa fa-thumbs-o-up"></i>&nbsp;&nbsp;推荐文章</div>
+    
+    <div class="row">
+        
+            
+                
+                <div class="col s12" 
+                >
+                    <div class="post-card" style="background-image: url('/medias/featureimages/11.jpg')">
+                        <div class="post-body">
+                            <div class="post-categories">
+                                
+                                    
+                                
+                            </div>
+                            <a href="/posts/44837.html">
+                                <h3 class="post-title">java.util.function中的函数式接口</h3>
+                            </a>
+                            <p class="post-description">前言：针对与jdk1.8的新特性(流)，java.util.function包下的函数式接口的学习是必不可少的。lambda表达式的入参除了普通的入参，大部分都是以lam</p>
+                            <a href="/posts/44837.html"
+                               class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)">
+                                <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+        
+    </div>
+
 
                         </div>
                     </div>
@@ -570,6 +603,41 @@
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/posts/44837.html">
+                            <div class="card-image">
+                                
+                                    
+                                    <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="java.util.function中的函数式接口">
+                                
+                                <span class="card-title">java.util.function中的函数式接口</span>
+                            </div>
+                        </a>
+
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    前言：针对与jdk1.8的新特性(流)，java.util.function包下的函数式接口的学习是必不可少的。lambda表达式的入参除了普通的入参，大部分都是以lambda表达式作为方法的入参。如{(a, b) -&gt; a + b}
+                                
+                            </div>
+                            <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-07
+                            </span>
+                                <span class="publish-author">
+                                    
+                                        <i class="fa fa-user fa-fw"></i>
+                                        小黑
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
             
                 <div class="article col s12 m6 l4" data-aos="zoom-in">
                     <div class="card">
@@ -1159,64 +1227,34 @@ themes/next/_config.yml：主题配置文
                     </div>
                 </div>
             
-                <div class="article col s12 m6 l4" data-aos="zoom-in">
-                    <div class="card">
-                        <a href="/posts/42500.html">
-                            <div class="card-image">
-                                
-                                    
-                                    <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Github+Hexo搭建个人博客">
-                                
-                                <span class="card-title">Github+Hexo搭建个人博客</span>
-                            </div>
-                        </a>
-
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    
-前言：最近自己用markdown写了一些博客，想着把自己写的东西也放在Github上。然后……自己的博客搭建了三天才完成。这过程也是蛮丰富的，一步一个脚印，一步一个坑啊。我把自己遇到的比较烦人的问题记下来，方便自己也方便大家 
-
-搭建环境
-                                
-                            </div>
-                            <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-02
-                            </span>
-                                <span class="publish-author">
-                                    
-                                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                        
-                                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
-                                    博客搭建
-                                </a>
-                                        
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                            <div class="card-action article-tags">
-                                
-                                    <a href="/tags/Mac/">
-                                        <span class="chip bg-color">Mac</span>
-                                    </a>
-                                
-                                    <a href="/tags/Hexo/">
-                                        <span class="chip bg-color">Hexo</span>
-                                    </a>
-                                
-                            </div>
-                        
-                    </div>
-                </div>
-            
         </div>
     </article>
 
 </main>
+
+
+    <div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+                <a class="left btn-floating btn-large disabled">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">1 / 2</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+                <a href="/page/2/"
+                   class="right btn-floating btn-large waves-effect waves-light bg-color">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            
+        </div>
+    </div>
+</div>
 
 
 
@@ -1251,7 +1289,7 @@ themes/next/_config.yml：主题配置文
             
                 
                     &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
-                            class="white-color">7.2k</span>&nbsp;字
+                            class="white-color">8.7k</span>&nbsp;字
                 
                 
                 <script>
@@ -1433,7 +1471,7 @@ themes/next/_config.yml：主题配置文
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1599026085482')
+  navigator.serviceWorker.register('/sw.js?t=1599484769568')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
