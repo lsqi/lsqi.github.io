@@ -514,29 +514,31 @@
 </blockquote>
 <p>T -&gt; 函数接收参数的类型</p>
 <p>R -&gt; 函数返回结果的类型</p>
-<pre><code>// TODO 接收T类型的参数，返回R类型的结果
-R apply(T t); // Function默认的调用方式
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// TODO 接收T类型的参数，返回R类型的结果</span>
+R <span class="token function">apply</span><span class="token punctuation">(</span>T t<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Function默认的调用方式</span>
 
-Function&lt;Object, String&gt; function = (s) -&gt; {
-    return s.toString().UpperCase();
-}
-function.apply("function");
-// 输出结果："FUNCTION"</code></pre><h3 id="UnaryOperator"><a href="#UnaryOperator" class="headerlink" title="UnaryOperator"></a>UnaryOperator</h3><h4 id="jdk1-8介绍-1"><a href="#jdk1-8介绍-1" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+Function<span class="token operator">&lt;</span>Object<span class="token punctuation">,</span> String<span class="token operator">></span> function <span class="token operator">=</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">UpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+function<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token string">"function"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 输出结果："FUNCTION"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="UnaryOperator"><a href="#UnaryOperator" class="headerlink" title="UnaryOperator"></a>UnaryOperator</h3><h4 id="jdk1-8介绍-1"><a href="#jdk1-8介绍-1" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
 <p>@FunctionalInterface</p>
 <p>public interface <strong>UnaryOperator</strong></p>
 <p>extends Function&lt;T,T&gt;</p>
 <p>表示对单个操作数产生与其操作数相同类型的结果的操作。对于操作数和结果是相同类型的情况，这是Function的<code>Function</code> 。</p>
 <p>这是一个functional interface的功能方法是<code>Function.apply(Object)</code> 。</p>
 </blockquote>
-<pre><code>// TODO 接收T类型的参数，返回T类型的结果
-T apply(T t); // UnaryOperator 默认的调用方式
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// TODO 接收T类型的参数，返回T类型的结果</span>
+T <span class="token function">apply</span><span class="token punctuation">(</span>T t<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// UnaryOperator 默认的调用方式</span>
 
-// TODO 接收一个String类型的参数，返回一个String类型的值。既是生产者又是消费者
-UnaryOperator&lt;String&gt; unaryOperator = (s) -&gt; {
-    return s.trim().toUpperCase();
-}
+<span class="token comment" spellcheck="true">// TODO 接收一个String类型的参数，返回一个String类型的值。既是生产者又是消费者</span>
+UnaryOperator<span class="token operator">&lt;</span>String<span class="token operator">></span> unaryOperator <span class="token operator">=</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-unartOperator.apply(" test "); // 输出结果："TEST";</code></pre><h3 id="BiFunction"><a href="#BiFunction" class="headerlink" title="BiFunction"></a>BiFunction</h3><h4 id="jdk1-8介绍-2"><a href="#jdk1-8介绍-2" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+unartOperator<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token string">" test "</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出结果："TEST";</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="BiFunction"><a href="#BiFunction" class="headerlink" title="BiFunction"></a>BiFunction</h3><h4 id="jdk1-8介绍-2"><a href="#jdk1-8介绍-2" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
 <p>@FunctionalInterface</p>
 <p>public interface <strong>BiFunction</strong></p>
 <p>表示接受两个参数并产生结果的函数。这是<code>Function</code>的二元专业化 。</p>
@@ -547,28 +549,30 @@ unartOperator.apply(" test "); // 输出结果："TEST";</code></pre><h3 id="BiF
 <p>T -&gt; 函数接收第一个参数的类型</p>
 <p>U -&gt; 函数接收第二个参数的类型</p>
 <p>R -&gt; 函数返回结果的类型</p>
-<pre><code>// TODO 接收T类型和U类型的参数，返回R类型的结果
-R apply(T t, U u); // BiFunction 默认的调用方式
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// TODO 接收T类型和U类型的参数，返回R类型的结果</span>
+R <span class="token function">apply</span><span class="token punctuation">(</span>T t<span class="token punctuation">,</span> U u<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// BiFunction 默认的调用方式</span>
 
-// TODO 打印输入两个参数的字符长度
-BiFunction&lt;Object, String, Integer&gt; biFunction = (s1, s2) -&gt; {
-    return s1.toString().length() + s2.length();
-};
-Integer result = biFunction.apply("woshi", "xiaohei");
-System.out.println(result); // 输出结果：12</code></pre><h3 id="BinaryOperator"><a href="#BinaryOperator" class="headerlink" title="BinaryOperator"></a>BinaryOperator</h3><h4 id="jdk1-8介绍-3"><a href="#jdk1-8介绍-3" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+<span class="token comment" spellcheck="true">// TODO 打印输入两个参数的字符长度</span>
+BiFunction<span class="token operator">&lt;</span>Object<span class="token punctuation">,</span> String<span class="token punctuation">,</span> Integer<span class="token operator">></span> biFunction <span class="token operator">=</span> <span class="token punctuation">(</span>s1<span class="token punctuation">,</span> s2<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> s1<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> s2<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+Integer result <span class="token operator">=</span> biFunction<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token string">"woshi"</span><span class="token punctuation">,</span> <span class="token string">"xiaohei"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出结果：12</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="BinaryOperator"><a href="#BinaryOperator" class="headerlink" title="BinaryOperator"></a>BinaryOperator</h3><h4 id="jdk1-8介绍-3"><a href="#jdk1-8介绍-3" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
 <p>@FunctionalInterface</p>
 <p>public interface BinaryOperator<t></t></p>
 <p>extends <strong>BiFunction</strong></p>
 <p><strong>表示对同一类型的两个操作数的操作，产生与操作数相同类型的结果</strong>。对于操作数和结果都是相同类型的情况，这是BiFunction的专业化 。</p>
 <p>这是一个functional interface的功能方法是BiFunction.apply(Object, Object) 。</p>
 </blockquote>
-<pre><code>// TODO 接收两个T类型的参数，返回T类型的结果
-T apply(T t1, T t2); // BinaryOperator 默认的调用方式
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// TODO 接收两个T类型的参数，返回T类型的结果</span>
+T <span class="token function">apply</span><span class="token punctuation">(</span>T t1<span class="token punctuation">,</span> T t2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// BinaryOperator 默认的调用方式</span>
 
-// TODO 例子：拼接接收的两个String参数
-BinaryOperator&lt;String&gt; binaryOperator = (s1, s2) -&gt; s1 + s2;
-String result = binaryOperator.apply("a", "b");
-// 输出结果：“ab”；</code></pre><p><strong>从接口的定义来说，BiFunction比Function多了一个入参，也使得BiFunction在一些业务场景上更灵活些。但其实本质上，他们的调用方式都是使用apply()进行调用</strong></p>
+<span class="token comment" spellcheck="true">// TODO 例子：拼接接收的两个String参数</span>
+BinaryOperator<span class="token operator">&lt;</span>String<span class="token operator">></span> binaryOperator <span class="token operator">=</span> <span class="token punctuation">(</span>s1<span class="token punctuation">,</span> s2<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> s1 <span class="token operator">+</span> s2<span class="token punctuation">;</span>
+String result <span class="token operator">=</span> binaryOperator<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 输出结果：“ab”；</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>从接口的定义来说，BiFunction比Function多了一个入参，也使得BiFunction在一些业务场景上更灵活些。但其实本质上，他们的调用方式都是使用apply()进行调用</strong></p>
 <h3 id="Predicate"><a href="#Predicate" class="headerlink" title="Predicate"></a>Predicate</h3><h4 id="jdk1-8介绍-4"><a href="#jdk1-8介绍-4" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
 <p>@FunctionalInterface</p>
 <p>public interface Predicate<t></t></p>
@@ -576,13 +580,14 @@ String result = binaryOperator.apply("a", "b");
 <p>这是一个functional interface的功能方法是test(Object) 。</p>
 </blockquote>
 <p><strong>简述：Predicate表达式 &lt;==&gt; 逻辑判断语句</strong></p>
-<pre><code>// TODO 接收T类型参数，返回boolean类型的结果
-boolean test(T t); // Predicate 默认的调用方式
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// TODO 接收T类型参数，返回boolean类型的结果</span>
+<span class="token keyword">boolean</span> <span class="token function">test</span><span class="token punctuation">(</span>T t<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Predicate 默认的调用方式</span>
 
-// TODO Predicate接收返回boolean类型的逻辑表达式。
-Predicate predicate = pre -&gt; "aa".equals(pre);
-boolean result = predicate2.test("aa");
-System.out.println(result);</code></pre><h3 id="Supplier"><a href="#Supplier" class="headerlink" title="Supplier"></a>Supplier</h3><h4 id="jdk1-8介绍-5"><a href="#jdk1-8介绍-5" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+<span class="token comment" spellcheck="true">// TODO Predicate接收返回boolean类型的逻辑表达式。</span>
+Predicate predicate <span class="token operator">=</span> pre <span class="token operator">-</span><span class="token operator">></span> <span class="token string">"aa"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>pre<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">boolean</span> result <span class="token operator">=</span> predicate2<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"aa"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Supplier"><a href="#Supplier" class="headerlink" title="Supplier"></a>Supplier</h3><h4 id="jdk1-8介绍-5"><a href="#jdk1-8介绍-5" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
 <p>@FunctionalInterface</p>
 <p>public interface <strong>Supplier</strong></p>
 <p>代表结果供应商。</p>
@@ -591,24 +596,25 @@ System.out.println(result);</code></pre><h3 id="Supplier"><a href="#Supplier" cl
 <blockquote>
 <p>这是一个functional interface的功能方法是<code>get()</code> 。</p>
 </blockquote>
-<pre><code>// Teacher{"name":"", "school":"", "subject":""}
-// TODO 使用Supplier函数式接口创建一个默认的Teacher对象。
-// TODO 不接受任何参数，但是返回一个类型的对象。 ==&gt; 生产者
-Supplier&lt;Teacher&gt; teacherSupplier = () -&gt; {
-    Teacher t = new Teacher();
-    t.setName("张三");
-    t.setSchool("某市一中");
-    t.setSubject("语文");
-    return t;
-}
-// 获取一个默认的Teacher对象。
-// 默认信息为Teacher{"name":"张三", "school":"某市一中", "subject":"语文"}
-teacherSupplier.get();
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// Teacher{"name":"", "school":"", "subject":""}</span>
+<span class="token comment" spellcheck="true">// TODO 使用Supplier函数式接口创建一个默认的Teacher对象。</span>
+<span class="token comment" spellcheck="true">// TODO 不接受任何参数，但是返回一个类型的对象。 ==> 生产者</span>
+Supplier<span class="token operator">&lt;</span>Teacher<span class="token operator">></span> teacherSupplier <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    Teacher t <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Teacher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    t<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    t<span class="token punctuation">.</span><span class="token function">setSchool</span><span class="token punctuation">(</span><span class="token string">"某市一中"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    t<span class="token punctuation">.</span><span class="token function">setSubject</span><span class="token punctuation">(</span><span class="token string">"语文"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> t<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 获取一个默认的Teacher对象。</span>
+<span class="token comment" spellcheck="true">// 默认信息为Teacher{"name":"张三", "school":"某市一中", "subject":"语文"}</span>
+teacherSupplier<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// 使用Teacher::new创建Supplier&lt;Teacher&gt;对象。
-Supplier&lt;Teacher&gt; teacherSupplier2 = Teacher::new;
-// teacherSupplier2.get() 获取到的Teacher对象默认信息为null
-teacherSupplier2.get();</code></pre><h3 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h3><h4 id="jdk1-8介绍-6"><a href="#jdk1-8介绍-6" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
+<span class="token comment" spellcheck="true">// 使用Teacher::new创建Supplier&lt;Teacher>对象。</span>
+Supplier<span class="token operator">&lt;</span>Teacher<span class="token operator">></span> teacherSupplier2 <span class="token operator">=</span> Teacher<span class="token operator">:</span><span class="token operator">:</span><span class="token keyword">new</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// teacherSupplier2.get() 获取到的Teacher对象默认信息为null</span>
+teacherSupplier2<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h3><h4 id="jdk1-8介绍-6"><a href="#jdk1-8介绍-6" class="headerlink" title="jdk1.8介绍"></a>jdk1.8介绍</h4><blockquote>
 <p>@FunctionalInterface</p>
 <p>public interface Consumer<t></t></p>
 <p>表示接受单个输入参数并且不返回结果的操作。与大多数其他功能界面不同， Consumer预计将通过副作用进行操作。</p>
@@ -616,15 +622,16 @@ teacherSupplier2.get();</code></pre><h3 id="Consumer"><a href="#Consumer" class=
 <blockquote>
 <p>这是一个functional interface的功能方法是accept(Object) 。</p>
 </blockquote>
-<pre><code>// TODO 接收T类型
-void accept(T t); // Consumer 默认的调用方式
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// TODO 接收T类型</span>
+<span class="token keyword">void</span> <span class="token function">accept</span><span class="token punctuation">(</span>T t<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Consumer 默认的调用方式</span>
 
-// TODO Consumer ：该函数式接口接收一个参数，但不返回任何类型的值。==&gt;消费者
-Consumer&lt;String&gt; consumer = (s) -&gt; {
-    System.out.println(s.trim().toUpperCase());
-}
-consumer.accept("  consumer   ");
-// 输出结果："CONSUMER"</code></pre><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="函数式接口总结"><a href="#函数式接口总结" class="headerlink" title="函数式接口总结"></a>函数式接口总结</h3><table>
+<span class="token comment" spellcheck="true">// TODO Consumer ：该函数式接口接收一个参数，但不返回任何类型的值。==>消费者</span>
+Consumer<span class="token operator">&lt;</span>String<span class="token operator">></span> consumer <span class="token operator">=</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+consumer<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token string">"  consumer   "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 输出结果："CONSUMER"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="函数式接口总结"><a href="#函数式接口总结" class="headerlink" title="函数式接口总结"></a>函数式接口总结</h3><table>
 <thead>
 <tr>
 <th>接口</th>
@@ -1337,7 +1344,7 @@ $ mvn clean package -Dmaven.test.skip=true
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1599484816708')
+  navigator.serviceWorker.register('/sw.js?t=1599485026863')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

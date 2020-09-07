@@ -86,14 +86,14 @@
   </url>
   
   <url>
-    <loc>http://lishengqi.gitee.io/tags/index.html</loc>
+    <loc>http://lishengqi.gitee.io/friends/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>http://lishengqi.gitee.io/friends/index.html</loc>
+    <loc>http://lishengqi.gitee.io/tags/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>http://lishengqi.gitee.io/archives/index.html</loc>
+    <loc>http://lishengqi.gitee.io/categories/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>http://lishengqi.gitee.io/categories/index.html</loc>
+    <loc>http://lishengqi.gitee.io/archives/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
@@ -158,6 +158,13 @@
 
   
   <url>
+    <loc>http://lishengqi.gitee.io/tags/http%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2020-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://lishengqi.gitee.io/tags/Mac/</loc>
     <lastmod>2020-09-07</lastmod>
     <changefreq>daily</changefreq>
@@ -165,14 +172,7 @@
   </url>
   
   <url>
-    <loc>http://lishengqi.gitee.io/tags/NexT/</loc>
-    <lastmod>2020-09-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lishengqi.gitee.io/tags/http%E5%8D%8F%E8%AE%AE/</loc>
+    <loc>http://lishengqi.gitee.io/tags/Hexo/</loc>
     <lastmod>2020-09-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -193,21 +193,7 @@
   </url>
   
   <url>
-    <loc>http://lishengqi.gitee.io/tags/Hexo/</loc>
-    <lastmod>2020-09-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lishengqi.gitee.io/tags/Spring-Cloud-Config/</loc>
-    <lastmod>2020-09-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lishengqi.gitee.io/tags/Spring-Cloud-Bus/</loc>
+    <loc>http://lishengqi.gitee.io/tags/NexT/</loc>
     <lastmod>2020-09-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -228,6 +214,13 @@
   </url>
   
   <url>
+    <loc>http://lishengqi.gitee.io/tags/Spring-Cloud-Bus/</loc>
+    <lastmod>2020-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://lishengqi.gitee.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/</loc>
     <lastmod>2020-09-07</lastmod>
     <changefreq>daily</changefreq>
@@ -242,21 +235,14 @@
   </url>
   
   <url>
+    <loc>http://lishengqi.gitee.io/tags/Spring-Cloud-Config/</loc>
+    <lastmod>2020-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://lishengqi.gitee.io/tags/%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84/</loc>
-    <lastmod>2020-09-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lishengqi.gitee.io/tags/RabbitMQ/</loc>
-    <lastmod>2020-09-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lishengqi.gitee.io/tags/docker/</loc>
     <lastmod>2020-09-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -276,17 +262,31 @@
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>http://lishengqi.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <loc>http://lishengqi.gitee.io/tags/docker/</loc>
     <lastmod>2020-09-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
+    <loc>http://lishengqi.gitee.io/tags/RabbitMQ/</loc>
+    <lastmod>2020-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
     <loc>http://lishengqi.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lishengqi.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2020-09-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
